@@ -27,6 +27,9 @@ SOFTWARE.
 #include <thread>
 #include <memory>
 #include "sdInstall.hpp"
+
+#include "PMU.h"
+#include "profiler.hpp"
 #include "install/install_nsp.hpp"
 #include "install/install_xci.hpp"
 #include "install/sdmc_xci.hpp"
@@ -105,7 +108,13 @@ namespace nspInstStuff {
                 const u64 baseTitleId = leaf::util::GetBaseTitleId(titleId, metaType);
                 inst::ui::instPage::setInstallIconFromTitleId(baseTitleId);
 
+                prof::Profiler *prof = new prof::Profiler();
+                prof->startProfiling();
                 installTask->Begin();
+                prof->stopProfiling();
+                prof->logResults();
+                delete prof;
+
                 inst::diag::RecordSuccess(currentName);
                 successCount++;
             }

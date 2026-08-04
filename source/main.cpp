@@ -8,7 +8,7 @@
 #include "gcInstall.hpp"
 
 using namespace pu::ui::render;
-int main(int argc, char* argv[])
+int main()
 {
     bool appInitialized = false;
     try {
