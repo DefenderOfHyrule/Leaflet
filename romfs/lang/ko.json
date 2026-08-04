@@ -1,0 +1,358 @@
+{
+    "main": {
+        "menu": {
+            "sd": "SD 카드에서 설치",
+            "hdd": "USB SSD/HDD에서 설치",
+            "usb": "Quark에서 설치",
+            "gc": "게임 카드에서 설치",
+            "set": "설정",
+            "exit": "종료",
+            "browser": "파일 브라우저",
+            "net": "네트워크 (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "경고!",
+                "desc": "USB 설치는 일부 장치 및 설정에서 \"작동\"되지 않을 수 있습니다.\nUSB 설치에 문제가 발생하면 머리카락을 뽑지 마십시오!\nUSB 설치에는 NS-USB로더를 사용하거나 원격 설치에는\nLAN/인터넷 설치를 대신 사용하는 것이 좋습니다.\n특히 이더넷 어댑터와 페어링할 때 그렇습니다!\n\n경고 했습니다...",
+                "opt1": "다시는 나에게 말하지 마세요"
+            },
+            "error": {
+                "title": "USB 연결이 감지되지 않았습니다.",
+                "desc": "USB를 통해 설치하려면 호환되는 장치에 연결하세요."
+            }
+        },
+        "hdd": {
+            "title": "USB 드라이브가 감지되지 않았습니다",
+            "notfound": "설치하려면 USB SSD 또는 하드 드라이브를 연결하세요."
+        },
+        "applet": {
+            "title": "애플릿 모드가 지원되지 않습니다.",
+            "desc": "애플릿 모드에서 Leaflet을 사용할 때 문제가 발생할 수 있습니다.\n문제가 있는 경우 설치된 타이틀 위에서 Leaflet을 실행하는 것으로\n전환하십시오(게임을 시작하는 동안 R 버튼을 누르세요)!"
+        },
+        "buttons": " 선택     종료",
+        "info": {
+            "button": " 정보",
+            "sd": "SD 카드에 저장된 NSP/NSZ/XCI/XCZ 파일을 설치합니다.",
+            "hdd": "연결된 USB SSD 또는 하드 드라이브에서 파일을 직접 설치합니다.",
+            "usb": "Quark 같은 도구로 USB 설치를 진행합니다.",
+            "gc": "삽입된 게임 카드에서 직접 타이틀을 설치합니다.",
+            "set": "Leaflet 환경설정과 샵 설정을 변경합니다.",
+            "exit": "Leaflet을 종료하고 HOME으로 돌아갑니다.",
+            "browser": "SD 카드를 탐색하고 분할 게임 파일이 있는 폴더에 아카이브 비트를 설정합니다.",
+            "net": "로컬 네트워크를 통해 Quark를 실행 중인 PC에서 타이틀을 설치합니다."
+        },
+        "quark": {
+            "choose": {
+                "title": "Quark를 통해 설치",
+                "desc": "PC의 Quark에 연결하는 방법을 선택하세요.",
+                "usb": "USB",
+                "net": "무선 (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "도움말",
+                "desc": "NSP, NSZ, XCI, XCZ 파일을 SD 카드에 복사하고\n설치할 파일을 찾아 선택한 다음 플러스 버튼을 누릅니다."
+            },
+            "top_info": "설치할 파일을 선택한 다음 플러스 버튼을 누르세요!",
+            "source_string": " SD 카드에서",
+            "delete_info": " 설치되었습니다! SD 카드에서 삭제하겠습니까?",
+            "delete_info_multi": " 파일이 성공적으로 설치되었습니다! SD 카드에서 삭제하겠습니까?",
+            "delete_desc": "원본 파일은 설치 후 더 이상 필요하지 않습니다.",
+            "buttons": " 설치     모두 선택     아카이브 비트     도움말     취소"
+        },
+        "hdd": {
+            "help": {
+                "title": "도움말",
+                "desc": "USB SSD 또는 하드 드라이브를 연결한 뒤 NSP, NSZ, XCI 또는 XCZ 파일을 찾아 선택하고 플러스 버튼을 누르세요."
+            },
+            "top_info": "설치할 파일을 선택한 다음 플러스 버튼을 누르세요!",
+            "source_string": " USB 드라이브에서",
+            "delete_info": " 이(가) 설치되었습니다. USB 드라이브에서 삭제하시겠습니까?",
+            "delete_info_multi": " 개의 파일이 성공적으로 설치되었습니다. USB 드라이브에서 삭제하시겠습니까?",
+            "delete_desc": "설치가 완료된 후에는 원본 파일이 더 이상 필요하지 않습니다",
+            "buttons": " 설치     모두 선택     아카이브 비트     도움말     취소"
+        },
+        "usb": {
+            "help": {
+                "title": "도움말",
+                "desc": "게임 덤프는 Quark를 사용하여 설치할 수 있습니다.\n이 기능을 사용하려면 PC에서 Quark를 열고, 경로를 설정(여러 개도 가능!)하여\n설치할 게임 덤프를 선택하세요!"
+            },
+            "top_info": "USB 연결이 성공하였습니다! 보낼 파일 목록을 기다리는 중...",
+            "top_info2": "USB를 통해 설치할 파일을 선택한 다음 플러스 버튼을 누르세요!",
+            "error": "USB 전송 시간 초과 또는 실패하였습니다.",
+            "source_string": " (Quark USB를 통해)",
+            "buttons": " (홀드) 도움말     (홀드) 취소",
+            "buttons2": " 파일 선택     모두 선택     파일 설치     취소"
+        },
+        "target": {
+            "desc0": "어디에 ",
+            "desc1": " 설치하겠습니까?",
+            "desc00": "선택해야 할 위치에 ",
+            "desc01": " 파일이 설치됩니까?",
+            "opt0": "SD 카드",
+            "opt1": "내부 저장소"
+        },
+        "info_page": {
+            "top_info0": "설치 중 ",
+            "preparing": "설치 준비 중...",
+            "failed": "설치가 실패하였습니다 ",
+            "failed_desc": "시스템 설정 애플릿에서 부분적으로 설치된 콘텐츠를 제거할 수 있습니다.",
+            "complete": "설치가 완료되었습니다.",
+            "desc0": " 파일이 성공적으로 설치되었습니다!",
+            "desc1": " 설치되었습니다!",
+            "downloading": "다운로드 중 ",
+            "at": " 에 "
+        },
+        "finished": [
+            "설치 완료!",
+            "완료!",
+            "모두 끝났습니다.",
+            "플레이 준비 완료.",
+            "설치 성공."
+        ],
+        "archivebit": {
+            "title": "아카이브 비트 설정됨",
+            "desc": "폴더가 이제 파일로 인식되어 설치를 위해 선택할 수 있습니다.",
+            "confirm_title": "아카이브 비트를 설정하시겠습니까?",
+            "confirm_desc": "\"{}\"을(를) 파일로 표시합니다.\nLeaflet에서는 취소할 수 없습니다.",
+            "error_desc": "아카이브 비트는 SD 카드에서만 지원됩니다."
+        },
+        "browser": {
+            "top_info": "탐색할 드라이브를 선택하세요:",
+            "buttons": " 아카이브 비트     복사     붙여넣기     삭제     도움말     뒤로",
+            "help": {
+                "title": "도움말",
+                "desc": "파일 및 폴더를 탐색합니다.\nA: 폴더 열기\nB: 상위로 / 드라이브 목록 / 메인 메뉴로 이동\nZL: 선택한 폴더에 아카이브 비트 설정\nR: 선택한 항목을 클립보드에 복사\nZR: 클립보드 항목을 여기에 붙여넣기\nY: 선택한 항목 삭제\nX: 이 도움말 화면"
+            },
+            "drive": {
+                "sd": "SD 카드"
+            },
+            "copy": {
+                "title": "클립보드에 복사",
+                "desc": "\"{}\"을(를) 클립보드에 복사하시겠습니까?",
+                "fat32_title": "FAT32 크기 제한",
+                "fat32_desc": "\"{}\"은(는) 4GB를 초과하여 FAT32 형식의 드라이브에 복사할 수 없습니다. 4GB 이상의 파일을 복사하려면 드라이브를 exFAT로 포맷하세요."
+            },
+            "paste": {
+                "confirm_title": "여기에 붙여넣기",
+                "confirm_desc": "\"{}\"을(를) 현재 폴더에 붙여넣으시겠습니까?",
+                "overwrite_title": "파일이 이미 존재함",
+                "overwrite_desc": "\"{}\"이(가) 여기에 이미 존재합니다. 덮어쓰시겠습니까?",
+                "error_title": "붙여넣기 불가",
+                "error_same": "원본과 대상이 같습니다.",
+                "done_title": "완료",
+                "done_desc": "\"{}\" 복사가 완료되었습니다.",
+                "fail_title": "복사 실패",
+                "fail_desc": "파일을 복사하지 못했습니다."
+            },
+            "delete": {
+                "confirm_title": "삭제하시겠습니까?",
+                "confirm_desc": "\"{}\"을(를) 삭제하시겠습니까?\n이 작업은 취소할 수 없습니다.",
+                "done_title": "삭제됨",
+                "done_desc": "\"{}\"이(가) 삭제되었습니다.",
+                "fail_title": "삭제 실패",
+                "fail_desc": "항목을 삭제하지 못했습니다."
+            }
+        },
+        "net": {
+            "top_info": "Quark에 연결 중...",
+            "top_info2": "설치할 파일을 선택하세요",
+            "connecting": "Quark에 연결 중...",
+            "no_drives": "Quark에서 드라이브나 특수 경로를 찾을 수 없습니다.",
+            "buttons": " 설치     전체 선택     도움말     뒤로",
+            "buttons2": " 설치     전체 선택     도움말     뒤로",
+            "ip": {
+                "title": "Quark PC IP 입력",
+                "desc": "Quark가 실행 중인 PC의 IP 주소를 입력하세요 (예: 192.168.1.10).\n네트워크 지원이 활성화된 상태로 Quark가 실행 중인지 확인하세요.",
+                "select_desc": "저장된 호스트를 선택하거나 새 호스트를 입력하세요.",
+                "name_desc": "이 호스트의 이름을 입력하세요 (예: \"집 PC\")",
+                "save_title": "호스트를 저장하시겠습니까?",
+                "save_desc": "이 호스트를 나중에 사용하기 위해 저장하시겠습니까?"
+            },
+            "connect_fail": {
+                "title": "연결 실패",
+                "desc": "Quark에 연결할 수 없습니다. 네트워크 지원이 활성화된 상태로 Quark가 PC에서 실행 중인지, IP 주소가 올바른지 확인하세요."
+            },
+            "source_string": " (Quark LAN을 통해)",
+            "new_host": "새 호스트 입력...",
+            "host": {
+                "buttons": " 호스트 추가     호스트 삭제     뒤로",
+                "delete_title": "호스트를 삭제하시겠습니까?",
+                "delete_desc": "\"{}\"을(를) 저장된 호스트에서 삭제하시겠습니까?"
+            },
+            "connecting_buttons": " 취소",
+            "connect_cancel": " 취소"
+        },
+        "already_installed": {
+            "title": "이미 설치됨",
+            "same_version": "이 버전은 이미 설치되어 있습니다. 재설치하시겠습니까?",
+            "diff_version": "이 타이틀의 다른 버전이 이미 설치되어 있습니다. 교체하시겠습니까?",
+            "reinstall": "재설치"
+        },
+        "gc": {
+            "title": "게임 카드 설치 프로그램",
+            "status": {
+                "no_card": "상태: 게임 카드 없음",
+                "detecting": "상태: 게임 카드 감지됨, 마운트 중...",
+                "ready": "상태: 게임 카드 마운트됨 및 준비 완료",
+                "failed": "상태: 게임 카드 마운트 실패"
+            },
+            "no_card_text": "삽입된 게임 카드 없음",
+            "install_sd": "SD 카드에 설치",
+            "install_nand": "시스템 메모리(NAND)에 설치",
+            "select_content": "설치할 콘텐츠 선택...",
+            "nothing_selected_label": "선택된 항목 없음",
+            "no_content": "설치 가능한 콘텐츠를 찾을 수 없음",
+            "base_version": "기본 1.0.0",
+            "update_label": "업데이트",
+            "base_label": "기본 게임",
+            "update_data_label": "업데이트 데이터",
+            "install_dialog": {
+                "title": "게임 카드에서 설치",
+                "no_content_desc": "게임 카드가 마운트되지 않았거나 설치 가능한 콘텐츠를 찾을 수 없습니다."
+            },
+            "nothing_selected_dialog": {
+                "title": "선택된 항목 없음",
+                "desc": "설치할 콘텐츠 유형을 하나 이상 선택하세요."
+            },
+            "update_not_selected": {
+                "title": "업데이트 데이터가 선택되지 않음",
+                "desc": "이 게임 카드에는 선택하지 않은 업데이트 데이터가 포함되어 있습니다.\n\n일부 타이틀은 실행 전에 업데이트가 필요할 수 있습니다.\n필요한 데이터를 찾을 수 없다는 메시지가 표시될 수 있습니다.\n\n기본 게임만으로 계속하시겠습니까?",
+                "continue": "계속"
+            },
+            "sigpatches": {
+                "title": "서명 패치가 감지되지 않음",
+                "desc": "이 콘솔에서 서명 패치가 감지되지 않았습니다.\n\n서명 패치 없이 비공식 소프트웨어를 설치하면\n정상적으로 작동하지 않을 수 있습니다.\n\n계속 진행하시겠습니까?"
+            },
+            "details": {
+                "title": "게임 카드 세부 정보"
+            }
+        },
+        "downgrade": {
+            "title": "다운그레이드 경고",
+            "desc": "최신 버전 위에 이전 버전을 설치하려 합니다.\n\n다운그레이드는 저장 데이터 손상 또는 손실을 초래할 수 있으며,\n게임이 실행 불가능해질 수 있습니다.\n\n다운그레이드를 진행하시겠습니까?",
+            "proceed": "다운그레이드"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "타이틀에 필요한 최소 펌웨어 버전 무시",
+            "ask_delete": "설치 후 원본 파일 삭제 요청",
+            "language": "언어: ",
+            "check_update": "Leaflet 업데이트 확인",
+            "credits": "크레딧",
+            "sound": "효과음을 활성화",
+            "oled": "OLED 모드를 활성화",
+            "auto_skip_reinstall": "재설치 확인 메시지 자동 건너뛰기",
+            "cancel_queue_on_error": "설치 오류 시 대기열 취소"
+        },
+        "update": {
+            "title": "업데이트 가능",
+            "desc0": "Leaflet ",
+            "desc1": " 지금 사용할 수 있습니다! 업데이트할 준비가 되었나요?",
+            "opt0": "업데이트",
+            "top_info": "Leaflet로 업데이트 중 ",
+            "bot_info": "Leaflet 다운로드 중 ",
+            "bot_info2": "Leaflet 추출 중 ",
+            "complete": "업데이트 완료되었습니다!",
+            "failed": "업데이트 실패하였습니다!",
+            "end_desc": "이제 소프트웨어가 닫힙니다.",
+            "title_check_fail": "업데이트를 찾을 수 없습니다.",
+            "desc_check_fail": "최신 버전의 Leaflet을 사용 중입니다!"
+        },
+        "credits": {
+            "title": "다음 분들께 감사드립니다!",
+            "desc": "- XorTroll (Plutonium 및 Goldleaf)\n- Atmosphere 팀 (libhaze)\n- DarkMatterCore (libusbhsfs)\n- ITotalJustice (Gamecard-Installer-NX)\n- luketanti (기본 UI)\n- 홈브류 커뮤니티의 노고와 헌신에 감사드립니다\n- Leaflet을 사용해 주셔서 감사합니다!"
+        },
+        "language": {
+            "title": "Leaflet 언어 선택",
+            "desc": "언어 변경 후 소프트웨어가 종료됩니다. 취소하려면 B 버튼을 누르세요.",
+            "system_language": "시스템"
+        },
+        "title": "Leaflet 설정을 변경하십시오!",
+        "buttons": " 선택/변경     취소",
+        "appearance": {
+            "section": "외관",
+            "select_preset": "사전 설정 테마 선택...",
+            "custom_theme": "사용자 지정 테마...",
+            "import_theme": "저장된 테마 가져오기...",
+            "reset_theme": "기본 테마로 초기화",
+            "bg_color": "배경 색상",
+            "panel_color": "패널 색상",
+            "bar_color": "바 색상",
+            "highlight_color": "강조 색상",
+            "gradient_start": "그라데이션 시작",
+            "gradient_end": "그라데이션 끝",
+            "regen_gradient": "배경 그라데이션 재생성",
+            "invalid_color": {
+                "title": "잘못된 색상",
+                "desc": "0~9 및 A~F의 16진수를 사용하여 #RRGGBBAA 형식으로 색상을 입력하세요.\n예: #8D00FFBF\n값이 적용되지 않았습니다."
+            },
+            "color_applied": {
+                "title": "색상 적용됨",
+                "desc_suffix": "이(가) {}로 설정되었습니다.\n\n색상이 즉시 적용됩니다."
+            },
+            "gradient_start_set": {
+                "title": "그라데이션 시작 색상 설정됨",
+                "desc_suffix": "시작 색상이 {}로 설정되었습니다.\n\n배경 그라데이션 재생성을 눌러\n새 그라데이션을 즉시 적용하세요."
+            },
+            "gradient_end_set": {
+                "title": "그라데이션 끝 색상 설정됨",
+                "desc_suffix": "끝 색상이 {}로 설정되었습니다.\n\n배경 그라데이션 재생성을 눌러\n새 그라데이션을 즉시 적용하세요."
+            },
+            "gradient_regen": {
+                "title": "배경 재생성됨",
+                "desc": "배경 그라데이션이 재생성되어\n즉시 적용되었습니다."
+            },
+            "theme_applied": {
+                "title": "테마 적용됨",
+                "desc_suffix": "이(가) 즉시 적용되었습니다,\n배경 그라데이션 포함."
+            },
+            "theme_reset": {
+                "title": "테마 초기화됨",
+                "desc": "색상이 Leaflet 기본값으로 초기화되어\n즉시 적용되었습니다."
+            },
+            "select_theme_dialog": {
+                "title": "테마 선택",
+                "desc": "색상 테마를 선택하세요. 변경사항이 즉시 적용됩니다."
+            }
+        },
+        "theme_manager": {
+            "page_title": "테마 관리자",
+            "buttons": " 적용  현재 테마 내보내기  삭제  뒤로",
+            "export_item": "현재 테마 내보내기...",
+            "export_dialog": {
+                "title": "테마 내보내기 완료",
+                "name_prompt": "테마 이름"
+            },
+            "export_failed": {
+                "title": "내보내기 실패",
+                "desc": "테마 파일을 쓸 수 없습니다.\nSD 카드의 여유 공간을 확인하세요."
+            },
+            "theme_applied": {
+                "title": "테마 적용됨",
+                "desc_suffix": "이(가) 즉시 적용되었습니다.\n새 배경을 보려면 재시작하세요."
+            },
+            "delete_dialog": {
+                "title": "테마 삭제",
+                "desc_suffix": "?\n이 작업은 취소할 수 없습니다."
+            },
+            "quick_export": {
+                "title": "테마 내보내기 완료",
+                "failed_title": "내보내기 실패",
+                "failed_desc": "테마 파일을 쓸 수 없습니다."
+            }
+        }
+    },
+    "common": {
+        "ok": "확인",
+        "cancel": "취소",
+        "close": "닫기",
+        "yes": "예",
+        "no": "아니오",
+        "cancel_desc": "취소하려면 B 버튼을 누르세요"
+    }
+}

@@ -1,0 +1,358 @@
+{
+    "main": {
+        "menu": {
+            "sd": "通过 SD 卡安装",
+            "hdd": "通过 USB SSD/HDD 安装",
+            "usb": "通过 Quark 安装",
+            "gc": "从游戏卡安装",
+            "set": "设置",
+            "exit": "退出",
+            "browser": "文件浏览器",
+            "net": "网络 (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "警告！",
+                "desc": "USB 安装在某些设备或设置下可能没法如愿正常使用。\n如果您在使用 USB 安装中遇到问题，请不要心急！\n建议使用 Quark 来进行 USB 安装，\n或者在主机已连接到网络的情况下通过局域网或网络来进行远程安装!\n\n在此衷心提示...",
+                "opt1": "不再提示"
+            },
+            "error": {
+                "title": "未检测到 USB 连接",
+                "desc": "请通过 USB 连接一个兼容设备"
+            }
+        },
+        "hdd": {
+            "title": "未检测到 USB 存储设备",
+            "notfound": "请连接 USB SSD 或移动硬盘后再安装。"
+        },
+        "applet": {
+            "title": "不支持 Applet 模式",
+            "desc": "在 Applet 模式下使用 Leaflet 可能会遇到问题，\n如果遇到问题，请切换 Leaflet 的运行模式！\n(退回主界面，按住  并打开任意游戏，进入 hbmenu 后再打开 Leaflet 即可)"
+        },
+        "buttons": " 选择     退出",
+        "info": {
+            "button": " 信息",
+            "sd": "安装存储在 SD 卡中的 NSP/NSZ/XCI/XCZ 文件。",
+            "hdd": "直接从已连接的 USB SSD 或移动硬盘安装文件。",
+            "usb": "使用 Quark 等工具通过 USB 安装。",
+            "gc": "直接从插入的游戏卡安装游戏。",
+            "set": "修改 Leaflet 偏好和商店设置。",
+            "exit": "关闭 Leaflet 并返回 HOME。",
+            "browser": "浏览SD卡并为包含分割游戏文件的文件夹设置存档位。",
+            "net": "通过局域网从运行 Quark 的 PC 安装游戏。"
+        },
+        "quark": {
+            "choose": {
+                "title": "通过 Quark 安装",
+                "desc": "选择连接到 PC 上 Quark 的方式。",
+                "usb": "USB",
+                "net": "无线 (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "帮助",
+                "desc": "复制 NSP、NSZ、XCI 或 XCZ 文件到 SD 卡，\n浏览并选择将要安装的文件，然后按  以安装。"
+            },
+            "top_info": "选择将要安装的文件，然后按  以安装！",
+            "source_string": " 通过 SD 卡",
+            "delete_info": " 安装完成！是否从 SD 卡中删除安装文件？",
+            "delete_info_multi": " 文件安装成功！是否从 SD 卡中删除安装文件？",
+            "delete_desc": "安装完成后不再需要安装文件",
+            "buttons": " 安装     全选     存档位     帮助     取消"
+        },
+        "hdd": {
+            "help": {
+                "title": "帮助",
+                "desc": "连接 USB SSD 或移动硬盘，浏览并选择 NSP、NSZ、XCI 或 XCZ 文件，然后按  安装。"
+            },
+            "top_info": "选择要安装的文件，然后按  进行安装！",
+            "source_string": " 来自 USB 存储设备",
+            "delete_info": " 已安装！是否从 USB 存储设备中删除？",
+            "delete_info_multi": " 个文件安装成功！是否从 USB 存储设备中删除？",
+            "delete_desc": "安装完成后不再需要保留原始文件",
+            "buttons": " 安装     全选     存档位     帮助     取消"
+        },
+        "usb": {
+            "help": {
+                "title": "帮助",
+                "desc": "你的游戏文件可以通过 Quark 进行安装。\n请在 PC 上打开 Quark，配置一个（或多个！）路径\n以便快速访问，然后选择要安装的游戏文件！"
+            },
+            "top_info": "USB 连接成功！正在等待发送文件列表...",
+            "top_info2": "选择将要通过 USB 安装的文件，然后按  以安装！",
+            "error": "USB 传输超时或失败",
+            "source_string": " 通过 Quark (USB)",
+            "buttons": " (按住) 帮助     (按住) 取消",
+            "buttons2": " 选择     全选     安装     取消"
+        },
+        "target": {
+            "desc0": "请选择 ",
+            "desc1": " 安装位置？",
+            "desc00": "请选择选定 ",
+            "desc01": " 个文件安装位置？",
+            "opt0": "SD 卡",
+            "opt1": "内部存储"
+        },
+        "info_page": {
+            "top_info0": "正在安装 ",
+            "preparing": "正在准备安装...",
+            "failed": "安装失败 ",
+            "failed_desc": "部分安装的内容可以从系统设置中删除。",
+            "complete": "安装完成",
+            "desc0": " 个文件安装成功！",
+            "desc1": " 安装完成！",
+            "downloading": "正在下载 ",
+            "at": " 以 "
+        },
+        "finished": [
+            "安装完成！",
+            "完成！",
+            "全部结束。",
+            "可以游玩了。",
+            "安装成功。"
+        ],
+        "archivebit": {
+            "title": "已设置存档位",
+            "desc": "该文件夹现在被视为文件，可以选择进行安装。",
+            "confirm_title": "设置存档位？",
+            "confirm_desc": "这将把\"{}\"标记为文件。\n此操作无法在Leaflet中撤销。",
+            "error_desc": "存档位仅在SD卡上受支持。"
+        },
+        "browser": {
+            "top_info": "选择要浏览的驱动器：",
+            "buttons": " 存档位     复制     粘贴     删除     帮助     返回",
+            "help": {
+                "title": "帮助",
+                "desc": "浏览文件和文件夹。\nA：打开文件夹\nB：返回上级 / 驱动器列表 / 主菜单\nZL：为选中文件夹设置存档位\nR：将选中项目复制到剪贴板\nZR：将剪贴板内容粘贴到此处\nY：删除选中项目\nX：此帮助界面"
+            },
+            "drive": {
+                "sd": "SD 卡"
+            },
+            "copy": {
+                "title": "复制到剪贴板",
+                "desc": "将\"{}\"复制到剪贴板？",
+                "fat32_title": "FAT32 大小限制",
+                "fat32_desc": "\"{}\"大于 4 GB，无法复制到 FAT32 格式的驱动器。请将驱动器重新格式化为 exFAT 以复制大于 4 GB 的文件。"
+            },
+            "paste": {
+                "confirm_title": "粘贴到此处",
+                "confirm_desc": "将\"{}\"粘贴到当前文件夹？",
+                "overwrite_title": "文件已存在",
+                "overwrite_desc": "\"{}\"在此处已存在。覆盖？",
+                "error_title": "无法粘贴",
+                "error_same": "源和目标相同。",
+                "done_title": "完成",
+                "done_desc": "\"{}\"已成功复制。",
+                "fail_title": "复制失败",
+                "fail_desc": "复制文件失败。"
+            },
+            "delete": {
+                "confirm_title": "删除？",
+                "confirm_desc": "删除\"{}\"？\n此操作无法撤销。",
+                "done_title": "已删除",
+                "done_desc": "\"{}\"已被删除。",
+                "fail_title": "删除失败",
+                "fail_desc": "删除项目失败。"
+            }
+        },
+        "net": {
+            "top_info": "正在连接到 Quark...",
+            "top_info2": "选择要安装的文件",
+            "connecting": "正在连接到 Quark...",
+            "no_drives": "Quark 未报告任何驱动器或特殊路径。",
+            "buttons": " 安装     全选     帮助     返回",
+            "buttons2": " 安装     全选     帮助     返回",
+            "ip": {
+                "title": "输入 Quark PC 的 IP",
+                "desc": "输入运行 Quark 的 PC 的 IP 地址（例如 192.168.1.10）。\n请确保 Quark 已开启网络支持并正在运行。",
+                "select_desc": "选择已保存的主机或输入新主机。",
+                "name_desc": "输入此主机的名称（例如\"家用PC\"）",
+                "save_title": "保存主机？",
+                "save_desc": "是否保存此主机以便将来使用？"
+            },
+            "connect_fail": {
+                "title": "连接失败",
+                "desc": "无法连接到 Quark。请确保 Quark 已在 PC 上启用网络支持并运行，且 IP 地址正确。"
+            },
+            "source_string": " 通过 Quark (LAN)",
+            "new_host": "输入新主机...",
+            "host": {
+                "buttons": " 添加主机     删除主机     返回",
+                "delete_title": "删除主机？",
+                "delete_desc": "从已保存的主机中删除\"{}\"？"
+            },
+            "connecting_buttons": " 取消",
+            "connect_cancel": " 取消"
+        },
+        "already_installed": {
+            "title": "已安装",
+            "same_version": "此版本已安装。重新安装？",
+            "diff_version": "此游戏的其他版本已安装。替换？",
+            "reinstall": "重新安装"
+        },
+        "gc": {
+            "title": "游戏卡安装程序",
+            "status": {
+                "no_card": "状态：无游戏卡",
+                "detecting": "状态：检测到游戏卡，挂载中...",
+                "ready": "状态：游戏卡已挂载并就绪",
+                "failed": "状态：游戏卡挂载失败"
+            },
+            "no_card_text": "未插入游戏卡",
+            "install_sd": "安装到SD卡",
+            "install_nand": "安装到系统内存（NAND）",
+            "select_content": "选择要安装的内容...",
+            "nothing_selected_label": "未选择任何内容",
+            "no_content": "未找到可安装内容",
+            "base_version": "基础版 1.0.0",
+            "update_label": "更新",
+            "base_label": "基础游戏",
+            "update_data_label": "更新数据",
+            "install_dialog": {
+                "title": "从游戏卡安装",
+                "no_content_desc": "未挂载游戏卡或未找到可安装内容。"
+            },
+            "nothing_selected_dialog": {
+                "title": "未选择任何内容",
+                "desc": "请至少选择一种内容类型进行安装。"
+            },
+            "update_not_selected": {
+                "title": "未选择更新数据",
+                "desc": "此游戏卡包含您未选择的更新数据。\n\n某些游戏在启动前需要安装更新。\n启动时可能会出现缺少数据的提示。\n\n仅安装基础游戏继续吗？",
+                "continue": "继续"
+            },
+            "sigpatches": {
+                "title": "未检测到签名补丁",
+                "desc": "未在此主机上检测到签名补丁。\n\n未安装签名补丁时安装非官方软件\n可能导致安装无法正常使用。\n\n仍要继续吗？"
+            },
+            "details": {
+                "title": "游戏卡详情"
+            }
+        },
+        "downgrade": {
+            "title": "降级警告",
+            "desc": "您正在将较新版本替换为较旧版本。\n\n降级可能导致存档数据损坏或丢失，\n并可能使游戏无法运行。\n\n确认降级？",
+            "proceed": "降级"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "忽略游戏最低固件版本要求",
+            "ask_delete": "安装后询问文件删除",
+            "language": "语言：",
+            "check_update": "检查 Leaflet 更新",
+            "credits": "致谢",
+            "sound": "启用声音",
+            "oled": "启用 OLED 模式",
+            "auto_skip_reinstall": "自动跳过重新安装提示",
+            "cancel_queue_on_error": "安装出错时取消队列"
+        },
+        "update": {
+            "title": "有更新可用",
+            "desc0": "Leaflet ",
+            "desc1": " 存在可用更新！是否更新？",
+            "opt0": "更新",
+            "top_info": "正在更新 Leaflet ",
+            "bot_info": "正在下载 Leaflet ",
+            "bot_info2": "正在解压 Leaflet ",
+            "complete": "更新完成！",
+            "failed": "更新失败！",
+            "end_desc": "软件即将被关闭。",
+            "title_check_fail": "没有发现更新",
+            "desc_check_fail": "当前 Leaflet 已是最新版！"
+        },
+        "credits": {
+            "title": "致谢以下朋友！",
+            "desc": "- XorTroll 提供 Plutonium 和 Goldleaf\n- Atmosphere 团队提供 libhaze\n- DarkMatterCore 提供 libusbhsfs\n- ITotalJustice 提供 Gamecard-Installer-NX\n- luketanti 提供基础界面\n- 感谢 Homebrew 社区的辛勤付出\n- 感谢你使用 Leaflet！"
+        },
+        "language": {
+            "title": "选择 Leaflet 语言",
+            "desc": "软件将在更改语言后关闭，按  取消。",
+            "system_language": "系统默认"
+        },
+        "title": "更改 Leaflet 设置！",
+        "buttons": " 选择/更改     取消",
+        "appearance": {
+            "section": "外观",
+            "select_preset": "选择预设主题...",
+            "custom_theme": "自定义主题...",
+            "import_theme": "导入已保存的主题...",
+            "reset_theme": "恢复默认主题",
+            "bg_color": "背景颜色",
+            "panel_color": "面板颜色",
+            "bar_color": "栏颜色",
+            "highlight_color": "高亮颜色",
+            "gradient_start": "渐变起始色",
+            "gradient_end": "渐变结束色",
+            "regen_gradient": "重新生成背景渐变",
+            "invalid_color": {
+                "title": "无效颜色",
+                "desc": "请以 #RRGGBBAA 格式输入颜色，使用十六进制数字 0–9 和 A–F。\n示例：#8D00FFBF\n该值未被应用。"
+            },
+            "color_applied": {
+                "title": "颜色已应用",
+                "desc_suffix": "已设置为 {}。\n\n颜色立即生效。"
+            },
+            "gradient_start_set": {
+                "title": "渐变起始色已设置",
+                "desc_suffix": "起始色已设置为 {}。\n\n请按重新生成背景渐变\n立即应用新渐变。"
+            },
+            "gradient_end_set": {
+                "title": "渐变结束色已设置",
+                "desc_suffix": "结束色已设置为 {}。\n\n请按重新生成背景渐变\n立即应用新渐变。"
+            },
+            "gradient_regen": {
+                "title": "背景已重新生成",
+                "desc": "背景渐变已重新生成\n并立即应用。"
+            },
+            "theme_applied": {
+                "title": "主题已应用",
+                "desc_suffix": "已立即应用，\n包括背景渐变。"
+            },
+            "theme_reset": {
+                "title": "主题已重置",
+                "desc": "颜色已重置为 Leaflet 默认值\n并立即应用。"
+            },
+            "select_theme_dialog": {
+                "title": "选择主题",
+                "desc": "选择一个颜色主题。更改立即生效。"
+            }
+        },
+        "theme_manager": {
+            "page_title": "主题管理器",
+            "buttons": " 应用  导出当前主题  删除  返回",
+            "export_item": "导出当前主题...",
+            "export_dialog": {
+                "title": "主题已导出",
+                "name_prompt": "主题名称"
+            },
+            "export_failed": {
+                "title": "导出失败",
+                "desc": "无法写入主题文件。\n请检查SD卡可用空间。"
+            },
+            "theme_applied": {
+                "title": "主题已应用",
+                "desc_suffix": "已立即应用。\n重启以查看新背景。"
+            },
+            "delete_dialog": {
+                "title": "删除主题",
+                "desc_suffix": "？\n此操作无法撤销。"
+            },
+            "quick_export": {
+                "title": "主题已导出",
+                "failed_title": "导出失败",
+                "failed_desc": "无法写入主题文件。"
+            }
+        }
+    },
+    "common": {
+        "ok": "确定",
+        "cancel": "取消",
+        "close": "关闭",
+        "yes": "是",
+        "no": "否",
+        "cancel_desc": "按  取消"
+    }
+}

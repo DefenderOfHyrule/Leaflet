@@ -1,0 +1,358 @@
+{
+    "main": {
+        "menu": {
+            "sd": "Install from SD card",
+            "hdd": "Install from USB SSD/HDD",
+            "usb": "Install from Quark",
+            "gc": "Install from Gamecard",
+            "set": "Settings",
+            "exit": "Exit",
+            "browser": "File Browser",
+            "net": "Network (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "Warning!",
+                "desc": "USB installations may not work on all devices and setups.\nIf you experience issues, try using Quark wirelessly.",
+                "opt1": "Don't tell me again"
+            },
+            "error": {
+                "title": "No USB connection detected",
+                "desc": "Plug in to a compatible device to install over USB"
+            }
+        },
+        "hdd": {
+            "title": "No USB drive detected",
+            "notfound": "Plug in a USB SSD or hard drive to install from it."
+        },
+        "applet": {
+            "title": "Applet Mode not supported",
+            "desc": "You may experience issues using Leaflet in Applet Mode. If you do\nhave problems, please switch to running Leaflet over an installed\ntitle (hold R while starting a game)!"
+        },
+        "buttons": " Select     Exit",
+        "info": {
+            "button": " Info",
+            "sd": "Install NSP/NSZ/XCI/XCZ files stored on your SD card.",
+            "hdd": "Install files directly from a connected USB SSD or hard drive.",
+            "gc": "Install titles directly from an inserted gamecard.",
+            "usb": "Install over USB or LAN using Quark.",
+            "set": "Change Leaflet preferences.",
+            "exit": "Close Leaflet and return to HOME.",
+            "browser": "Browse the SD card and set the archive bit on folders containing split game files.",
+            "net": "Install titles from a PC running Quark over the local network."
+        },
+        "quark": {
+            "choose": {
+                "title": "Install via Quark",
+                "desc": "Choose how to connect to Quark on your PC.",
+                "usb": "USB",
+                "net": "Wireless (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "Help",
+                "desc": "Copy your NSP, NSZ, XCI, or XCZ files to your SD card, browse to and\nselect the ones you want to install, then press the Plus button."
+            },
+            "top_info": "Select what files you want to install, then press the Plus button!",
+            "source_string": " from SD card",
+            "delete_info": " installed! Delete it from the SD card?",
+            "delete_info_multi": " files installed successfully! Delete them from the SD card?",
+            "delete_desc": "The original files aren't needed anymore after they've been installed",
+            "buttons": " Install File(s)     Select All     Archive Bit     Help     Cancel"
+        },
+        "hdd": {
+            "help": {
+                "title": "Help",
+                "desc": "Plug in a USB SSD or hard drive, browse to and select NSP, NSZ, XCI,\nor XCZ files, then press the Plus button."
+            },
+            "top_info": "Select what files you want to install, then press the Plus button!",
+            "source_string": " from USB drive",
+            "delete_info": " installed! Delete it from the USB drive?",
+            "delete_info_multi": " files installed successfully! Delete them from the USB drive?",
+            "delete_desc": "The original files aren't needed anymore after they've been installed",
+            "buttons": " Install File(s)     Select All     Archive Bit     Help     Cancel"
+        },
+        "usb": {
+            "help": {
+                "title": "Help",
+                "desc": "Your game dumps can be installed using Quark.\nTo use this feature, open Quark on your PC, configure a path (or multiple!)\nfor easy accessibility and select the game dumps you wish to install!"
+            },
+            "top_info": "USB connection successful! Waiting for list of files to be sent...",
+            "top_info2": "Select what files you want to install over USB, then press the Plus button!",
+            "error": "USB transfer timed out or failed",
+            "source_string": " over Quark (USB)",
+            "buttons": " Help     Cancel",
+            "buttons2": " Install File(s)     Select All     Cancel"
+        },
+        "target": {
+            "desc0": "Where should ",
+            "desc1": " be installed to?",
+            "desc00": "Where should the selected ",
+            "desc01": " files be installed to?",
+            "opt0": "SD Card",
+            "opt1": "Internal Storage"
+        },
+        "info_page": {
+            "top_info0": "Installing ",
+            "preparing": "Preparing installation...",
+            "failed": "Failed to install ",
+            "failed_desc": "Partially installed contents can be removed from the System Settings applet.",
+            "complete": "Install complete",
+            "desc0": " files installed successfully!",
+            "desc1": " installed!",
+            "downloading": "Downloading ",
+            "at": " at "
+        },
+        "finished": [
+            "Installation complete!",
+            "Done!",
+            "All finished.",
+            "Ready to play.",
+            "Install successful."
+        ],
+        "archivebit": {
+            "title": "Archive bit set",
+            "desc": "The folder is now seen as a file and can be selected for installation.",
+            "confirm_title": "Set archive bit?",
+            "confirm_desc": "This will mark \"{}\" as a file.\nThis cannot be undone from within Leaflet.",
+            "error_desc": "Archive bit is only supported on the SD card."
+        },
+        "browser": {
+            "top_info": "Select a drive to browse:",
+            "buttons": " Archive Bit     Copy     Paste     Delete     Help     Back",
+            "help": {
+                "title": "Help",
+                "desc": "Browse files and folders.\nA: Open folder\nB: Go up / back to drives / main menu\nZL: Set archive bit on selected folder\nR: Copy selected item to clipboard\nZR: Paste clipboard item here\nY: Delete selected item\nX: This help screen"
+            },
+            "drive": {
+                "sd": "SD Card"
+            },
+            "copy": {
+                "title": "Copy to clipboard",
+                "desc": "Copy \"{}\" to clipboard?",
+                "fat32_title": "FAT32 size limit",
+                "fat32_desc": "\"{}\" is larger than 4 GB and cannot be copied to a FAT32 formatted drive. Reformat the drive as exFAT to copy files larger than 4 GB."
+            },
+            "paste": {
+                "confirm_title": "Paste here",
+                "confirm_desc": "Paste \"{}\" into the current folder?",
+                "overwrite_title": "File exists",
+                "overwrite_desc": "\"{}\" already exists here. Overwrite it?",
+                "error_title": "Cannot paste",
+                "error_same": "Source and destination are the same.",
+                "done_title": "Done",
+                "done_desc": "\"{}\" copied successfully.",
+                "fail_title": "Copy failed",
+                "fail_desc": "Failed to copy the file."
+            },
+            "delete": {
+                "confirm_title": "Delete?",
+                "confirm_desc": "Delete \"{}\"?\nThis cannot be undone.",
+                "done_title": "Deleted",
+                "done_desc": "\"{}\" was deleted.",
+                "fail_title": "Delete failed",
+                "fail_desc": "Failed to delete the item."
+            }
+        },
+        "net": {
+            "top_info": "Connecting to Quark...",
+            "top_info2": "Select files to install",
+            "connecting": "Connecting to Quark...",
+            "no_drives": "Quark reported no drives or special paths.",
+            "buttons": " Install     Select All     Help     Back",
+            "buttons2": " Install     Select All     Help     Back",
+            "ip": {
+                "title": "Enter Quark PC IP",
+                "desc": "Enter the IP address of the PC running Quark (e.g. 192.168.1.10).\nMake sure Quark is running with network support enabled.",
+                "select_desc": "Select a saved host or enter a new one.",
+                "name_desc": "Enter a name for this host (e.g. \"Home PC\")",
+                "save_title": "Save host?",
+                "save_desc": "Save this host for future use?"
+            },
+            "connect_fail": {
+                "title": "Connection failed",
+                "desc": "Could not connect to Quark. Make sure Quark is running on the PC with network support enabled, and the IP address is correct."
+            },
+            "source_string": " over Quark (LAN)",
+            "new_host": "Enter new host...",
+            "host": {
+                "buttons": " Add host     Delete host     Back",
+                "delete_title": "Delete host?",
+                "delete_desc": "Delete \"{}\" from saved hosts?"
+            },
+            "connecting_buttons": " Cancel",
+            "connect_cancel": " Cancel"
+        },
+        "already_installed": {
+            "title": "Already installed",
+            "same_version": "This version is already installed. Reinstall it?",
+            "diff_version": "A different version of this title is already installed. Replace it?",
+            "reinstall": "Reinstall"
+        },
+        "gc": {
+            "title": "Gamecard Installer",
+            "status": {
+                "no_card": "Status: No gamecard",
+                "detecting": "Status: Gamecard detected, mounting...",
+                "ready": "Status: Gamecard mounted and ready",
+                "failed": "Status: Failed to mount gamecard"
+            },
+            "no_card_text": "No gamecard inserted",
+            "install_sd": "Install to SD Card",
+            "install_nand": "Install to System Memory (NAND)",
+            "select_content": "Select content to install...",
+            "nothing_selected_label": "Nothing selected",
+            "no_content": "No installable content found",
+            "base_version": "Base 1.0.0",
+            "update_label": "Update",
+            "base_label": "Base game",
+            "update_data_label": "Update data",
+            "install_dialog": {
+                "title": "Gamecard Install",
+                "no_content_desc": "No gamecard is mounted or no installable content was found."
+            },
+            "nothing_selected_dialog": {
+                "title": "Nothing selected",
+                "desc": "Select at least one content type to install."
+            },
+            "update_not_selected": {
+                "title": "Update data not selected",
+                "desc": "This gamecard includes update data that you have not selected.\n\nSome titles require their update to be installed before launching.\nYou may see a \"necessary data\" prompt when starting the game.\n\nContinue with base game only?",
+                "continue": "Continue"
+            },
+            "sigpatches": {
+                "title": "Signature patches not detected",
+                "desc": "Signature patches were not detected on this console.\n\nInstalling unofficial software without signature patches\nmay result in a non-functional installation.\n\nProceed anyway?"
+            },
+            "details": {
+                "title": "Gamecard Details"
+            }
+        },
+        "downgrade": {
+            "title": "Downgrade warning",
+            "desc": "You are installing an older version over a newer one.\n\nDowngrading can cause save data corruption or loss,\nand may make the game unplayable.\n\nProceed with downgrade?",
+            "proceed": "Downgrade"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "Ignore minimum firmware version required by titles",
+            "ask_delete": "Ask to delete original files after installation",
+            "language": "Language: ",
+            "check_update": "Check for updates to Leaflet",
+            "credits": "Credits",
+            "sound": "Enable sounds",
+            "oled": "Enable OLED mode",
+            "auto_skip_reinstall": "Auto-skip reinstall prompts",
+            "cancel_queue_on_error": "Cancel queue on install error"
+        },
+        "update": {
+            "title": "Update available",
+            "desc0": "Leaflet ",
+            "desc1": " is available now! Ready to update?",
+            "opt0": "Update",
+            "top_info": "Updating to Leaflet ",
+            "bot_info": "Downloading Leaflet ",
+            "bot_info2": "Extracting Leaflet ",
+            "complete": "Update complete!",
+            "failed": "Update failed!",
+            "end_desc": "The software will now be closed.",
+            "title_check_fail": "No updates found",
+            "desc_check_fail": "You are on the latest version of Leaflet!"
+        },
+        "credits": {
+            "title": "Thanks to the following people!",
+            "desc": "- XorTroll for Plutonium and Goldleaf\n- Atmosphere Team for libhaze\n- DarkMatterCore for libusbhsfs\n- ITotalJustice for Gamecard-Installer-NX\n- luketanti for the base UI\n- The Homebrew community for all their hard work and dedication\n- You, for using Leaflet!"
+        },
+        "language": {
+            "title": "Select Leaflet's language",
+            "desc": "The software will be closed after changing languages. Press B to cancel.",
+            "system_language": "System"
+        },
+        "title": "Change Leaflet's settings!",
+        "buttons": " Select/Change     Section     Back",
+        "appearance": {
+            "section": "Appearance",
+            "select_preset": "Select preset theme...",
+            "custom_theme": "Custom theme...",
+            "import_theme": "Theme Manager",
+            "reset_theme": "Reset to default theme",
+            "bg_color": "Background color",
+            "panel_color": "Panel color",
+            "bar_color": "Bar color",
+            "highlight_color": "Highlight color",
+            "gradient_start": "Gradient start",
+            "gradient_end": "Gradient end",
+            "regen_gradient": "Regenerate background gradient",
+            "invalid_color": {
+                "title": "Invalid color",
+                "desc": "Enter a color as #RRGGBBAA using hex digits 0-9 and A-F.\nExample: #8D00FFBF\nThe value was not applied."
+            },
+            "color_applied": {
+                "title": "Color applied",
+                "desc_suffix": " set to {}.\n\nColors take effect immediately."
+            },
+            "gradient_start_set": {
+                "title": "Gradient start set",
+                "desc_suffix": "Gradient start color set to {}.\n\nPress \"Regenerate background gradient\"\nto apply the new gradient immediately."
+            },
+            "gradient_end_set": {
+                "title": "Gradient end set",
+                "desc_suffix": "Gradient end color set to {}.\n\nPress \"Regenerate background gradient\"\nto apply the new gradient immediately."
+            },
+            "gradient_regen": {
+                "title": "Background regenerated",
+                "desc": "The background gradient has been regenerated\nand applied immediately."
+            },
+            "theme_applied": {
+                "title": "Theme applied",
+                "desc_suffix": " applied immediately,\nincluding the background gradient."
+            },
+            "theme_reset": {
+                "title": "Theme reset",
+                "desc": "Colors reset to Leaflet defaults\nand applied immediately."
+            },
+            "select_theme_dialog": {
+                "title": "Select theme",
+                "desc": "Choose a color theme. Changes apply immediately."
+            }
+        },
+        "theme_manager": {
+            "page_title": "Theme Manager",
+            "buttons": " Apply     Export current theme     Delete     Back",
+            "export_item": "Export current theme...",
+            "export_dialog": {
+                "title": "Theme exported",
+                "name_prompt": "Theme name"
+            },
+            "export_failed": {
+                "title": "Export failed",
+                "desc": "Could not write theme file.\nCheck that the SD card has free space."
+            },
+            "theme_applied": {
+                "title": "Theme applied",
+                "desc_suffix": " applied immediately.\nRestart to see the new background gradient."
+            },
+            "delete_dialog": {
+                "title": "Delete theme",
+                "desc_suffix": "?\nThis cannot be undone."
+            },
+            "quick_export": {
+                "title": "Theme exported",
+                "failed_title": "Export failed",
+                "failed_desc": "Could not write theme file."
+            }
+        }
+    },
+    "common": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "close": "Close",
+        "yes": "Yes",
+        "no": "No",
+        "cancel_desc": "Press B to cancel"
+    }
+}

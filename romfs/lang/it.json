@@ -1,0 +1,358 @@
+{
+    "main": {
+        "menu": {
+            "sd": "Installa dalla SD",
+            "hdd": "Installa da SSD/HDD USB",
+            "usb": "Installa da Quark",
+            "gc": "Installa dalla scheda di gioco",
+            "set": "Impostazioni",
+            "exit": "Esci",
+            "browser": "Browser File",
+            "net": "Rete (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "Attenzione!",
+                "desc": "L'installazione USB potrebbe non funzionare su alcuni dispositivi e in alcune configurazioni.\nSe stai incontrando dei problemi con l'installazione USB, non disperare!\nÈ consigliato usare Quark per le installazioni via USB, mentre\nLAN/Internet per le installazioni remote, specie\nquando si utilizza un adattatore ethernet!\n\nSei stato avvertito...",
+                "opt1": "Non dirmelo di nuovo!"
+            },
+            "error": {
+                "title": "Nessuna connessione USB rilevata",
+                "desc": "Collega a un dispositivo compatibile per installare via USB"
+            }
+        },
+        "hdd": {
+            "title": "Nessuna unità USB rilevata",
+            "notfound": "Collega un SSD o disco rigido USB per installare da lì."
+        },
+        "applet": {
+            "title": "Applet Mode non è supportata",
+            "desc": "Puoi incontrare problemi utilizzando Leaflet in Applet Mode. Se\nriscontri problemi, ti prego di utilizzare Leaflet avviandolo attraverso un gioco\ngià installato (tieni premuto R mentre avvii un gioco)!"
+        },
+        "buttons": " Seleziona     Esci",
+        "info": {
+            "button": " Info",
+            "sd": "Installa file NSP/NSZ/XCI/XCZ salvati sulla tua scheda SD.",
+            "hdd": "Installa file direttamente da un SSD o disco rigido USB collegato.",
+            "usb": "Installa via USB con strumenti come Quark.",
+            "gc": "Installa titoli direttamente da una scheda di gioco inserita.",
+            "set": "Modifica le preferenze di Leaflet.",
+            "exit": "Chiudi Leaflet e torna al menu HOME.",
+            "browser": "Sfoglia la scheda SD e imposta il bit archivio sulle cartelle con file di gioco divisi.",
+            "net": "Installa titoli da un PC con Quark tramite la rete locale."
+        },
+        "quark": {
+            "choose": {
+                "title": "Installa tramite Quark",
+                "desc": "Scegli come connetterti a Quark sul tuo PC.",
+                "usb": "USB",
+                "net": "Wireless (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "Aiuto",
+                "desc": "Copia i tuoi file NSP, NSZ, XCI, o XCZ nella SD, cercali e\nseleziona quelli che vuoi installare, poi premi Il tasto Più."
+            },
+            "top_info": "Seleziona quali file vuoi installare, poi premi Il tasto Più!",
+            "source_string": " dalla SD",
+            "delete_info": " installato! Cancellarlo dalla SD?",
+            "delete_info_multi": " file installati correttamente! Cancellarli dalla SD?",
+            "delete_desc": "I file originali non sono più necessari dopo averli installati",
+            "buttons": " Installa     Seleziona tutto     Bit archivio     Aiuto     Annulla"
+        },
+        "hdd": {
+            "help": {
+                "title": "Aiuto",
+                "desc": "Collega un SSD o disco rigido USB, cerca e seleziona file NSP, NSZ, XCI\no XCZ e premi il tasto Più."
+            },
+            "top_info": "Seleziona i file che vuoi installare e premi il tasto Più!",
+            "source_string": " dall'unità USB",
+            "delete_info": " installato! Eliminarlo dall'unità USB?",
+            "delete_info_multi": " file installati correttamente! Eliminarli dall'unità USB?",
+            "delete_desc": "I file originali non sono più necessari dopo l'installazione",
+            "buttons": " Installa     Seleziona tutto     Bit archivio     Aiuto     Annulla"
+        },
+        "usb": {
+            "help": {
+                "title": "Aiuto",
+                "desc": "I tuoi dump di gioco possono essere installati tramite Quark.\nPer usare questa funzione, apri Quark sul tuo PC, configura un percorso (o più di uno!)\nper un accesso facile e seleziona i dump da installare!"
+            },
+            "top_info": "Connessione USB avvenuta correttamete! Aspetto che la lista dei file venga inviata...",
+            "top_info2": "Seleziona quali file vuoi installare via USB, poi premi il tasto Più!",
+            "error": "Trasferimento USB scaduto o fallito",
+            "source_string": " tramite Quark (USB)",
+            "buttons": " (Tieni premuto) Aiuto     (Tieni premuto) Annulla",
+            "buttons2": " Seleziona File     Seleziona tutto     Installa i File     Annulla"
+        },
+        "target": {
+            "desc0": "Dove vuoi installare ",
+            "desc1": " ?",
+            "desc00": "Dove vuoi installare ",
+            "desc01": " file?",
+            "opt0": "SD",
+            "opt1": "Memoria interna"
+        },
+        "info_page": {
+            "top_info0": "Sto installando ",
+            "preparing": "Preparando l'installazione...",
+            "failed": "Installazione fallita ",
+            "failed_desc": "I contenuti parzialmente installati possono essere rimossi dalle Impostazioni di sistema.",
+            "complete": "Installazione completa",
+            "desc0": " file installati correttamente!",
+            "desc1": " installato!",
+            "downloading": "Sto scaricando ",
+            "at": " in "
+        },
+        "finished": [
+            "Installazione completata!",
+            "Fatto!",
+            "Tutto finito.",
+            "Pronto per giocare.",
+            "Installazione riuscita."
+        ],
+        "archivebit": {
+            "title": "Bit archivio impostato",
+            "desc": "La cartella è ora vista come un file e può essere selezionata per l'installazione.",
+            "confirm_title": "Impostare il bit archivio?",
+            "confirm_desc": "Questo segnerà \"{}\" come un file.\nNon può essere annullato da Leaflet.",
+            "error_desc": "Il bit archivio è supportato solo sulla scheda SD."
+        },
+        "browser": {
+            "top_info": "Seleziona un'unità da sfogliare:",
+            "buttons": " Bit archivio     Copia     Incolla     Elimina     Aiuto     Indietro",
+            "help": {
+                "title": "Aiuto",
+                "desc": "Sfoglia file e cartelle.\nA: Apri cartella\nB: Su / torna alle unità / menu principale\nZL: Imposta il bit archivio sulla cartella selezionata\nR: Copia elemento negli appunti\nZR: Incolla elemento dagli appunti qui\nY: Elimina elemento selezionato\nX: Questa schermata di guida"
+            },
+            "drive": {
+                "sd": "Scheda SD"
+            },
+            "copy": {
+                "title": "Copia negli appunti",
+                "desc": "Copiare \"{}\" negli appunti?",
+                "fat32_title": "Limite dimensione FAT32",
+                "fat32_desc": "\"{}\" è più grande di 4 GB e non può essere copiato su un'unità FAT32. Riformatta l'unità come exFAT per copiare file superiori a 4 GB."
+            },
+            "paste": {
+                "confirm_title": "Incolla qui",
+                "confirm_desc": "Incollare \"{}\" nella cartella corrente?",
+                "overwrite_title": "File già esistente",
+                "overwrite_desc": "\"{}\" esiste già qui. Sovrascriverlo?",
+                "error_title": "Impossibile incollare",
+                "error_same": "Origine e destinazione sono uguali.",
+                "done_title": "Fatto",
+                "done_desc": "\"{}\" copiato con successo.",
+                "fail_title": "Copia fallita",
+                "fail_desc": "Impossibile copiare il file."
+            },
+            "delete": {
+                "confirm_title": "Eliminare?",
+                "confirm_desc": "Eliminare \"{}\"?\nQuesta operazione non può essere annullata.",
+                "done_title": "Eliminato",
+                "done_desc": "\"{}\" è stato eliminato.",
+                "fail_title": "Eliminazione fallita",
+                "fail_desc": "Impossibile eliminare l'elemento."
+            }
+        },
+        "net": {
+            "top_info": "Connessione a Quark...",
+            "top_info2": "Seleziona i file da installare",
+            "connecting": "Connessione a Quark...",
+            "no_drives": "Quark non ha trovato unità o percorsi speciali.",
+            "buttons": " Installa     Seleziona tutto     Guida     Indietro",
+            "buttons2": " Installa     Seleziona tutto     Guida     Indietro",
+            "ip": {
+                "title": "Inserisci IP del PC con Quark",
+                "desc": "Inserisci l'indirizzo IP del PC su cui è in esecuzione Quark (es. 192.168.1.10).\nAssicurati che Quark sia avviato con il supporto di rete abilitato.",
+                "select_desc": "Seleziona un host salvato o inserine uno nuovo.",
+                "name_desc": "Inserisci un nome per questo host (es. \"PC di casa\")",
+                "save_title": "Salvare l'host?",
+                "save_desc": "Salvare questo host per uso futuro?"
+            },
+            "connect_fail": {
+                "title": "Connessione fallita",
+                "desc": "Impossibile connettersi a Quark. Assicurati che Quark sia in esecuzione con il supporto di rete abilitato e che l'indirizzo IP sia corretto."
+            },
+            "source_string": " tramite Quark (LAN)",
+            "new_host": "Inserisci nuovo host...",
+            "host": {
+                "buttons": " Aggiungi host     Elimina host     Indietro",
+                "delete_title": "Eliminare l'host?",
+                "delete_desc": "Eliminare \"{}\" dagli host salvati?"
+            },
+            "connecting_buttons": " Annulla",
+            "connect_cancel": " Annulla"
+        },
+        "already_installed": {
+            "title": "Già installato",
+            "same_version": "Questa versione è già installata. Reinstallarla?",
+            "diff_version": "È già installata una versione diversa di questo titolo. Sostituirla?",
+            "reinstall": "Reinstalla"
+        },
+        "gc": {
+            "title": "Installer da cartuccia",
+            "status": {
+                "no_card": "Stato: Nessuna cartuccia",
+                "detecting": "Stato: Cartuccia rilevata, montaggio...",
+                "ready": "Stato: Cartuccia montata e pronta",
+                "failed": "Stato: Impossibile montare la cartuccia"
+            },
+            "no_card_text": "Nessuna cartuccia inserita",
+            "install_sd": "Installa su scheda SD",
+            "install_nand": "Installa nella memoria di sistema (NAND)",
+            "select_content": "Seleziona contenuto da installare...",
+            "nothing_selected_label": "Niente selezionato",
+            "no_content": "Nessun contenuto installabile trovato",
+            "base_version": "Base 1.0.0",
+            "update_label": "Aggiornamento",
+            "base_label": "Gioco base",
+            "update_data_label": "Dati di aggiornamento",
+            "install_dialog": {
+                "title": "Installazione da cartuccia",
+                "no_content_desc": "Nessuna cartuccia montata o nessun contenuto installabile trovato."
+            },
+            "nothing_selected_dialog": {
+                "title": "Niente selezionato",
+                "desc": "Seleziona almeno un tipo di contenuto da installare."
+            },
+            "update_not_selected": {
+                "title": "Dati di aggiornamento non selezionati",
+                "desc": "Questa cartuccia include dati di aggiornamento non selezionati.\n\nAlcuni titoli richiedono l'aggiornamento prima dell'avvio.\nPotrebbe apparire un messaggio su dati mancanti.\n\nContinuare solo con il gioco base?",
+                "continue": "Continua"
+            },
+            "sigpatches": {
+                "title": "Patch di firma non rilevate",
+                "desc": "Non sono state rilevate patch di firma su questa console.\n\nInstallare software non ufficiale senza patch di firma\npotrebbe causare un'installazione non funzionante.\n\nProcedere comunque?"
+            },
+            "details": {
+                "title": "Dettagli cartuccia"
+            }
+        },
+        "downgrade": {
+            "title": "Avviso downgrade",
+            "desc": "Stai installando una versione più vecchia su una più recente.\n\nIl downgrade può causare corruzione o perdita dei dati di salvataggio\ne rendere il gioco inutilizzabile.\n\nProcedere con il downgrade?",
+            "proceed": "Downgrade"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "Ignora la versione minima del firmware richiesta dai titoli",
+            "ask_delete": "Chiedi di cancellare i file originale dopo l'installazione",
+            "language": "Lingua: ",
+            "check_update": "Controlla aggiornamenti di Leaflet ora",
+            "credits": "Crediti",
+            "sound": "Abilita i suoni",
+            "oled": "Abilita la modalità OLED",
+            "auto_skip_reinstall": "Salta automaticamente le richieste di reinstallazione",
+            "cancel_queue_on_error": "Annulla la coda in caso di errore di installazione"
+        },
+        "update": {
+            "title": "Aggiornamento disponibile",
+            "desc0": "Leaflet ",
+            "desc1": " è disponibile adesso! Pronto per aggiornare?",
+            "opt0": "Aggiorna",
+            "top_info": "Aggiornamento ad Leaflet ",
+            "bot_info": "Sto scaricando Leaflet ",
+            "bot_info2": "Sto estraendo Leaflet ",
+            "complete": "Aggiornamento completato!",
+            "failed": "Aggiornamento fallito!",
+            "end_desc": "Il software verrà chiuso.",
+            "title_check_fail": "Nessun aggiornamento disponibile",
+            "desc_check_fail": "Stai usando l'ultima versione di Leaflet!"
+        },
+        "credits": {
+            "title": "Un ringraziamento alle seguenti persone!",
+            "desc": "- XorTroll per Plutonium e Goldleaf\n- Team Atmosphere per libhaze\n- DarkMatterCore per libusbhsfs\n- ITotalJustice per Gamecard-Installer-NX\n- luketanti per l'interfaccia base\n- La community Homebrew per tutto il loro duro lavoro e dedizione\n- Te, per usare Leaflet!"
+        },
+        "language": {
+            "title": "Seleziona la lingua di Leaflet",
+            "desc": "Il software verrà chiuso dopo aver cambiato la lingua. Premi B per annullare.",
+            "system_language": "Default di sistema"
+        },
+        "title": "Cambia le impostazioni di Leaflet!",
+        "buttons": " Seleziona/Cambia     Annulla",
+        "appearance": {
+            "section": "Aspetto",
+            "select_preset": "Seleziona tema predefinito...",
+            "custom_theme": "Tema personalizzato...",
+            "import_theme": "Importa tema salvato...",
+            "reset_theme": "Ripristina tema predefinito",
+            "bg_color": "Colore sfondo",
+            "panel_color": "Colore pannello",
+            "bar_color": "Colore barra",
+            "highlight_color": "Colore selezione",
+            "gradient_start": "Inizio sfumatura",
+            "gradient_end": "Fine sfumatura",
+            "regen_gradient": "Rigenera sfumatura sfondo",
+            "invalid_color": {
+                "title": "Colore non valido",
+                "desc": "Inserisci un colore come #RRGGBBAA con cifre esadecimali 0–9 e A–F.\nEsempio: #8D00FFBF\nIl valore non è stato applicato."
+            },
+            "color_applied": {
+                "title": "Colore applicato",
+                "desc_suffix": "impostato su {}.\n\nI colori hanno effetto immediato."
+            },
+            "gradient_start_set": {
+                "title": "Inizio sfumatura impostato",
+                "desc_suffix": "Colore inizio impostato su {}.\n\nPremi \"Rigenera sfumatura sfondo\"\nper applicare la nuova sfumatura immediatamente."
+            },
+            "gradient_end_set": {
+                "title": "Fine sfumatura impostata",
+                "desc_suffix": "Colore fine impostato su {}.\n\nPremi \"Rigenera sfumatura sfondo\"\nper applicare la nuova sfumatura immediatamente."
+            },
+            "gradient_regen": {
+                "title": "Sfondo rigenerato",
+                "desc": "La sfumatura dello sfondo è stata rigenerata\ne applicata immediatamente."
+            },
+            "theme_applied": {
+                "title": "Tema applicato",
+                "desc_suffix": "applicato immediatamente,\nincludendo la sfumatura dello sfondo."
+            },
+            "theme_reset": {
+                "title": "Tema ripristinato",
+                "desc": "Colori ripristinati ai valori predefiniti di Leaflet\ne applicati immediatamente."
+            },
+            "select_theme_dialog": {
+                "title": "Seleziona tema",
+                "desc": "Scegli un tema colori. Le modifiche si applicano immediatamente."
+            }
+        },
+        "theme_manager": {
+            "page_title": "Gestione temi",
+            "buttons": " Applica  Esporta tema corrente  Elimina  Indietro",
+            "export_item": "Esporta tema corrente...",
+            "export_dialog": {
+                "title": "Tema esportato",
+                "name_prompt": "Nome del tema"
+            },
+            "export_failed": {
+                "title": "Esportazione fallita",
+                "desc": "Impossibile scrivere il file del tema.\nVerifica lo spazio disponibile sulla scheda SD."
+            },
+            "theme_applied": {
+                "title": "Tema applicato",
+                "desc_suffix": "applicato immediatamente.\nRiavvia per vedere il nuovo sfondo."
+            },
+            "delete_dialog": {
+                "title": "Elimina tema",
+                "desc_suffix": "?\nQuesta azione non può essere annullata."
+            },
+            "quick_export": {
+                "title": "Tema esportato",
+                "failed_title": "Esportazione fallita",
+                "failed_desc": "Impossibile scrivere il file del tema."
+            }
+        }
+    },
+    "common": {
+        "ok": "OK",
+        "cancel": "Annulla",
+        "close": "Chiudi",
+        "yes": "Sì",
+        "no": "No",
+        "cancel_desc": "Premi B per annullare"
+    }
+}
