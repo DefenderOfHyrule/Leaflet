@@ -7,6 +7,8 @@
 #include <chrono>
 #include <cmath>
 
+#include "profiler.hpp"
+
 namespace leaf::install::nsp
 {
     SDMCNSP::SDMCNSP(std::string path)
@@ -23,6 +25,8 @@ namespace leaf::install::nsp
 
     void SDMCNSP::StreamToPlaceholder(std::shared_ptr<nx::ncm::ContentStorage>& contentStorage, NcmContentId ncaId)
     {
+        prof::Profiler *profiler = new prof::Profiler();
+
         const PFS0FileEntry* fileEntry = this->GetFileEntryByNcaId(ncaId);
         std::string ncaFileName = this->GetFileEntryName(fileEntry);
 
@@ -40,6 +44,7 @@ namespace leaf::install::nsp
 
         try
         {
+            profiler->startProfiling();
             inst::ui::instPage::setInstInfoText("inst.info_page.top_info0"_lang + ncaFileName + "...");
             inst::ui::instPage::setInstBarPerc(0);
             inst::ui::instPage::setProgressDetailText("0% • Calculating... • -- MB/s");
@@ -52,6 +57,7 @@ namespace leaf::install::nsp
                 progress = (float) fileOff / (float) ncaSize;
 
                 if (fileOff % (0x400000 * 3) == 0) {
+                    profiler->fetchCounters();
                     LOG_DEBUG("> Progress: %lu/%lu MB (%d%s)\r", (fileOff / 1000000), (ncaSize / 1000000), (int)(progress * 100.0), "%");
                     inst::ui::instPage::setInstBarPerc((double)(progress * 100.0));
 
@@ -123,6 +129,8 @@ namespace leaf::install::nsp
             writer.close();
             throw;
         }
+        profiler->stopProfiling();
+        delete profiler;
     }
 
     void SDMCNSP::BufferData(void* buf, off_t offset, size_t size)

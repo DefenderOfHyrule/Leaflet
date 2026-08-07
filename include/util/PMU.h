@@ -169,7 +169,7 @@
 #define PMCNTENCLR_EL0_RES24 BIT(30) // Reserved
 #define PMCNTENCLR_EL0_C     BIT(31) // Cycle counter disable bit for PMCCNTR_EL0
 
-/* Performance Monitors Overflow Flag Status Clear Registe (PMOVSCLR_EL0) bits */
+/* Performance Monitors Overflow Flag Status Clear Register (PMOVSCLR_EL0) bits */
 #define PMOVSCLR_EL0_P0    BIT(00) // Event counter overflow clear bit for PMEVCNTR0_EL0
 #define PMOVSCLR_EL0_P1    BIT(01) // Event counter overflow clear bit for PMEVCNTR1_EL0
 #define PMOVSCLR_EL0_P2    BIT(02) // Event counter overflow clear bit for PMEVCNTR2_EL0

@@ -108,12 +108,7 @@ namespace nspInstStuff {
                 const u64 baseTitleId = leaf::util::GetBaseTitleId(titleId, metaType);
                 inst::ui::instPage::setInstallIconFromTitleId(baseTitleId);
 
-                prof::Profiler *prof = new prof::Profiler();
-                prof->startProfiling();
                 installTask->Begin();
-                prof->stopProfiling();
-                prof->logResults();
-                delete prof;
 
                 inst::diag::RecordSuccess(currentName);
                 successCount++;

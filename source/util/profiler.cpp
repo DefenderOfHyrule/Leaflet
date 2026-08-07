@@ -13,11 +13,18 @@
 
 namespace prof {
     Profiler::Profiler() {
+        this->clearCounters();
         this->initializeProfiler();
     }
 
     Profiler::~Profiler() {
         this->deinitializeProfiler();
+    }
+
+    void Profiler::clearCounters() {
+        /* Set clear bits for all 6 event counters and the cycle counter */
+        SET_PMCNTENCLR_EL0(PMCNTENCLR_EL0_P0 | PMCNTENCLR_EL0_P1 | PMCNTENCLR_EL0_P2 | PMCNTENCLR_EL0_P3 |
+                           PMCNTENCLR_EL0_P4 | PMCNTENCLR_EL0_P5 | PMCNTENCLR_EL0_C);
     }
 
     void Profiler::initializeProfiler() {
@@ -28,11 +35,6 @@ namespace prof {
         SET_PMEVTYPERN_EL0(PMEVTYPER##counterIndex##_EL0, Event);
 
         PROFILER_COUNTERS(CONFIGURE_COUNTER)
-
-
-        /* Set enable bits for event and clock counters */
-        SET_PMCNTENSET_EL0(PMCNTENSET_EL0_P0 | PMCNTENSET_EL0_P1 | PMCNTENSET_EL0_P2 | PMCNTENSET_EL0_P3 |
-                           PMCNTENSET_EL0_P4 | PMCNTENSET_EL0_P5 | PMCNTENCLR_EL0_C);
     }
 
     void Profiler::deinitializeProfiler() {
@@ -44,7 +46,9 @@ namespace prof {
     void Profiler::startProfiling() {
         DATA_SYNC_BARRIER();
         INSTRUCTION_BARRIER();
-        this->fetchCountersStart();
+        /* Set enable bits for event and clock counters */
+        SET_PMCNTENSET_EL0(PMCNTENSET_EL0_P0 | PMCNTENSET_EL0_P1 | PMCNTENSET_EL0_P2 | PMCNTENSET_EL0_P3 |
+                           PMCNTENSET_EL0_P4 | PMCNTENSET_EL0_P5 | PMCNTENCLR_EL0_C);
         INSTRUCTION_BARRIER();
         DATA_SYNC_BARRIER();
     }
@@ -52,50 +56,35 @@ namespace prof {
     void Profiler::stopProfiling() {
         DATA_SYNC_BARRIER();
         INSTRUCTION_BARRIER();
-        this->fetchCountersEnd();
+        this->fetchCounters();
         // Probably unneeded, but whatever.
+        this->logResults();
         INSTRUCTION_BARRIER();
         DATA_SYNC_BARRIER();
-
-        this->logResults();
     }
 
-    void Profiler::logResults() {
+    void Profiler::logResults() const {
+        LOG_DEBUG("%s: %llu", "Cycle count", getCycleCounter());
+
 #define PMU_LOG_EVENTS(value, Name, var) \
-    LOG_DEBUG("%s: %d", #Name, get##Name())
+    LOG_DEBUG("%s: %llu", #Name, get##Name())
 
         PROFILER_COUNTERS(PMU_LOG_EVENTS);
     }
 
-    void Profiler::fetchCountersStart() {
+    void Profiler::fetchCounters() {
         /* Get cycle count */
-        u64 startCycleCount;
-        GET_PMCCNTR_EL0(startCycleCount);
+        u64 CycleCount;
+        GET_PMCCNTR_EL0(CycleCount);
 
+        /* Save to variables */
 #define READ_COUNTER_START(counterIndex, Name, Event) \
-        u64 start##Name; \
-        GET_PMEVCNTRN_EL0(PMEVCNTR##counterIndex##_EL0, start##Name); \
-        mStart##Name = start##Name;
+        u64 temp##Name; \
+        GET_PMEVCNTRN_EL0(PMEVCNTR##counterIndex##_EL0, temp##Name); \
+        m##Name += temp##Name - m##Name;
 
         PROFILER_COUNTERS(READ_COUNTER_START)
 
-        /* Save to 'start' variables */
-        mStartCycleCount = startCycleCount;
-    }
-
-    void Profiler::fetchCountersEnd() {
-        /* Get cycle count */
-        u64 endCycleCount;
-        GET_PMCCNTR_EL0(endCycleCount);
-
-#define READ_COUNTER_END(counterIndex, Name, Event) \
-        u64 end##Name; \
-        GET_PMEVCNTRN_EL0(PMEVCNTR##counterIndex##_EL0, end##Name); \
-        mEnd##Name = end##Name;
-
-        PROFILER_COUNTERS(READ_COUNTER_END)
-
-        /* Save to 'end' variable */
-        mEndCycleCount = endCycleCount;
+        mCycleCount += CycleCount;
     }
 }
