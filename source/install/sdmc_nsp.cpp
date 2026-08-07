@@ -7,6 +7,7 @@
 #include <chrono>
 #include <cmath>
 
+#include "PMU.h"
 #include "profiler.hpp"
 
 namespace leaf::install::nsp
@@ -57,7 +58,6 @@ namespace leaf::install::nsp
                 progress = (float) fileOff / (float) ncaSize;
 
                 if (fileOff % (0x400000 * 3) == 0) {
-                    profiler->fetchCounters();
                     LOG_DEBUG("> Progress: %lu/%lu MB (%d%s)\r", (fileOff / 1000000), (ncaSize / 1000000), (int)(progress * 100.0), "%");
                     inst::ui::instPage::setInstBarPerc((double)(progress * 100.0));
 
@@ -115,8 +115,20 @@ namespace leaf::install::nsp
 
                 if (inst::ui::instPage::isInstallCancelRequested())
                     THROW_FORMAT("Installation canceled.");
+
+                u64 beforeGetData = profiler->readCycleCounter();
+                INSTRUCTION_BARRIER();
                 this->BufferData(readBuffer.get(), fileOff + fileStart, readSize);
+                INSTRUCTION_BARRIER();
+                u64 afterGetData = profiler->readCycleCounter();
+                LOG_DEBUG("cycle counter at getting data: %llu", afterGetData - beforeGetData);
+
+                u64 beforeWriteData = profiler->readCycleCounter();
+                INSTRUCTION_BARRIER();
                 writer.write(readBuffer.get(), readSize);
+                INSTRUCTION_BARRIER();
+                u64 afterWriteData = profiler->readCycleCounter();
+                LOG_DEBUG("cycle counter at writing data: %llu", afterWriteData - beforeWriteData);
 
                 fileOff += readSize;
             }

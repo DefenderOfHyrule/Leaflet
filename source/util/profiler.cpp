@@ -3,14 +3,6 @@
 #include "error.hpp"
 #include "util/PMU.h"
 
-#define PROFILER_COUNTERS(X) \
-    X(0, TotalBranches, PMU_BR_PRED) \
-    X(1, MissBranches, PMU_BR_MIS_PRED) \
-    X(2, TotalL1DAccess, PMU_L1D_CACHE) \
-    X(3, L1DMisses, PMU_L1D_CACHE_REFILL) \
-    X(4, TotalL2DAccess, PMU_L2D_CACHE) \
-    X(5, L2DMisses, PMU_L2D_CACHE_REFILL)
-
 namespace prof {
     Profiler::Profiler() {
         this->clearCounters();
@@ -31,8 +23,8 @@ namespace prof {
         /* Initialize all counters, and reset event and cycle counters, and set long cycle */
         SET_PMCR_EL0(PMCR_EL0_E | PMCR_EL0_P | PMCR_EL0_C | PMCR_EL0_LC);
 
-#define CONFIGURE_COUNTER(counterIndex, Name, Event) \
-        SET_PMEVTYPERN_EL0(PMEVTYPER##counterIndex##_EL0, Event);
+#define CONFIGURE_COUNTER(Index, Name, Type, Event) \
+        SET_PMEVTYPERN_EL0(PMEVTYPER##Index##_EL0, Event);
 
         PROFILER_COUNTERS(CONFIGURE_COUNTER)
     }
@@ -66,7 +58,7 @@ namespace prof {
     void Profiler::logResults() const {
         LOG_DEBUG("%s: %llu", "Cycle count", getCycleCounter());
 
-#define PMU_LOG_EVENTS(value, Name, var) \
+#define PMU_LOG_EVENTS(Index, Name, Type, Event) \
     LOG_DEBUG("%s: %llu", #Name, get##Name())
 
         PROFILER_COUNTERS(PMU_LOG_EVENTS);
@@ -74,17 +66,28 @@ namespace prof {
 
     void Profiler::fetchCounters() {
         /* Get cycle count */
-        u64 CycleCount;
-        GET_PMCCNTR_EL0(CycleCount);
+        // u64 CycleCount;
+        // GET_PMCCNTR_EL0(CycleCount);
 
         /* Save to variables */
-#define READ_COUNTER_START(counterIndex, Name, Event) \
-        u64 temp##Name; \
-        GET_PMEVCNTRN_EL0(PMEVCNTR##counterIndex##_EL0, temp##Name); \
+#define READ_COUNTER_START(Index, Name, Type, Event) \
+        Type temp##Name; \
+        GET_PMEVCNTRN_EL0(PMEVCNTR##Index##_EL0, temp##Name); \
         m##Name += temp##Name - m##Name;
 
         PROFILER_COUNTERS(READ_COUNTER_START)
 
-        mCycleCount += CycleCount;
+        mCycleCount += this->readCycleCounter();
     }
+
+    u64 Profiler::readCycleCounter() {
+        u64 tempCycleCount;
+        GET_PMCCNTR_EL0(tempCycleCount);
+        return tempCycleCount;
+    }
+
+#define PROFILER_DEFINE_READER(Index, Name, Type, Event) \
+    Type Profiler::read##Name() const { Type temp##Name; GET_PMEVCNTRN_EL0(PMEVCNTR##Index##_EL0, temp##Name); return temp##Name; }
+
+    PROFILER_COUNTERS(PROFILER_DEFINE_READER);
 }
