@@ -1,0 +1,541 @@
+{
+    "main": {
+        "menu": {
+            "sd": "Installer à partir de la carte SD",
+            "hdd": "Installer depuis un SSD/HDD USB",
+            "usb": "Installer via Quark",
+            "gc": "Installer depuis la cartouche",
+            "set": " Paramètres",
+            "exit": " Quitter",
+            "browser": "Explorateur",
+            "net": "Réseau (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "Avertissement!",
+                "desc": "L'installation USB peut ne \"pas fonctionner\" sur certains appareils et certaines configurations.\nSi vous rencontrez des problèmes avec l'installation USB, ne vous arrachez pas les cheveux !\n\n Il est conseillé d'utiliser Quark pour l'installation USB. Pour installer à distance, préfèrez les modes \nLAN/Internet, en particulier si vous utilisez un adaptateur ethernet!\n\nVous avez été prévenu...",
+                "opt1": "Ne plus m'avertir"
+            },
+            "error": {
+                "title": "Aucune connection USB détectée",
+                "desc": "Branchez un appareil compatible pour installer via le port USB"
+            }
+        },
+        "hdd": {
+            "title": "Aucun disque USB détecté",
+            "notfound": "Branchez un SSD ou un disque dur USB pour installer depuis celui-ci."
+        },
+        "applet": {
+            "title": "Le mode Applet n'est pas compatible",
+            "desc": "Vous pouvez rencontrer des problèmes en utilisant Leaflet en mode Applet.\n\n Si vous avez des problèmes, veuillez lancer Leaflet en mode 'non-Applet' (maintenez R pendant le démarrage d'un jeu)!"
+        },
+        "buttons": " Select     Quitter",
+        "info": {
+            "button": " Infos",
+            "sd": "Installez des fichiers NSP/NSZ/XCI/XCZ stockés sur votre carte SD.",
+            "hdd": "Installez des fichiers directement depuis un SSD ou disque dur USB connecté.",
+            "usb": "Installez via USB avec des outils comme Quark.",
+            "gc": "Installe des titres directement depuis une cartouche insérée.",
+            "set": "Modifiez les préférences Leaflet et les paramètres de la boutique.",
+            "exit": "Fermez Leaflet et retournez au menu HOME.",
+            "browser": "Parcourez la carte SD et définissez le bit d'archive sur les dossiers contenant des fichiers de jeu fractionnés.",
+            "net": "Installer des titres depuis un PC avec Quark via le réseau local."
+        },
+        "quark": {
+            "choose": {
+                "title": "Installer via Quark",
+                "desc": "Choisissez comment se connecter à Quark.",
+                "usb": "USB",
+                "net": "Sans fil (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "Aide",
+                "desc": "Copiez vos fichiers NSP, NSZ, XCI ou XCZ sur votre carte SD, recherchez et\nsélectionnez ceux que vous voulez installer, puis appuyez sur le bouton Plus."
+            },
+            "top_info": "Sélectionnez les fichiers que vous voulez installer, puis appuyez sur le bouton Plus !",
+            "source_string": " à partir de la carte SD",
+            "delete_info": " Installation réussie! Supprimer de la carte SD?",
+            "delete_info_multi": " fichiers installés avec succès ! Les supprimer de la carte SD ?",
+            "delete_desc": "Les fichiers originaux ne sont plus nécessaires une fois qu'ils ont été installés.",
+            "buttons": " Installer     Tout sélectionner     Bit d'archive     Aide     Annuler"
+        },
+        "hdd": {
+            "help": {
+                "title": "Aide",
+                "desc": "Branchez un SSD ou un disque dur USB, recherchez et sélectionnez des fichiers NSP, NSZ, XCI\nou XCZ, puis appuyez sur le bouton Plus."
+            },
+            "top_info": "Sélectionnez les fichiers à installer depuis le disque USB, puis appuyez sur le bouton Plus !",
+            "source_string": " depuis le disque USB",
+            "delete_info": " installé ! Le supprimer du disque USB ?",
+            "delete_info_multi": " fichiers installés avec succès ! Les supprimer du disque USB ?",
+            "delete_desc": "Les fichiers originaux ne sont plus nécessaires après installation",
+            "buttons": " Installer     Tout sélectionner     Bit d'archive     Aide     Annuler"
+        },
+        "usb": {
+            "help": {
+                "title": "Aide",
+                "desc": "Vos sauvegardes de jeux peuvent être installées avec Quark.\nPour utiliser cette fonctionnalité, ouvrez Quark sur votre PC, configurez un chemin (ou plusieurs !)\npour un accès facile et sélectionnez les sauvegardes à installer !"
+            },
+            "top_info": "Connexion USB réussie ! En attente de l'envoi de la liste des fichiers...",
+            "top_info2": "Sélectionnez les fichiers que vous voulez installer par USB, puis appuyez sur le bouton Plus !",
+            "error": "Le transfert USB a été interrompu ou a échoué",
+            "source_string": " via Quark (USB)",
+            "buttons": " (Maintenir) Aide     (Maintenir) Annuler",
+            "buttons2": " Sélectionnez un fichier     Tout sélectionner     Installer un/des fichier(s)     Annuler"
+        },
+        "target": {
+            "desc0": "Où ",
+            "desc1": " doit-il être installé?",
+            "desc00": "Où les fichier sélectionnés",
+            "desc01": " doivent-ils aller ?",
+            "opt0": "Carte SD",
+            "opt1": "Stockage Interne"
+        },
+        "info_page": {
+            "top_info0": "Installation ",
+            "verifying": "Vérification ",
+            "preparing": "Préparation de l'installation...",
+            "failed": "Installation échouée ",
+            "failed_desc": "Le contenu partiellement installé peut être supprimé depuis les paramètres systèmes de l'applet.",
+            "complete": "Installation complète",
+            "desc0": " fichiers installés avec succès !",
+            "desc1": " installé !",
+            "downloading": "Téléchargement ",
+            "at": " à "
+        },
+        "finished": [
+            "Installation terminée !",
+            "Terminé !",
+            "Tout est fait.",
+            "Prêt à jouer.",
+            "Installation réussie."
+        ],
+        "archivebit": {
+            "title": "Bit d'archive défini",
+            "desc": "Le dossier est maintenant vu comme un fichier et peut être sélectionné pour l'installation.",
+            "confirm_title": "Définir le bit d'archive?",
+            "confirm_desc": "Cela marquera \"{}\" comme un fichier.\nCela ne peut pas être annulé depuis Leaflet.",
+            "error_desc": "Le bit d'archive n'est pris en charge que sur la carte SD."
+        },
+        "browser": {
+            "top_info": "Sélectionner un lecteur à parcourir :",
+            "buttons": " Bit d'archive     Copier     Coller     Supprimer     Aide     Retour",
+            "help": {
+                "title": "Aide",
+                "desc": "Parcourir les fichiers et dossiers.\nA: Ouvrir le dossier\nB: Remonter / retour / menu principal\nZL: Bit d'archive\nR: Copier\nZR: Coller\nY: Supprimer\nX: Aide"
+            },
+            "drive": {
+                "sd": "Carte SD"
+            },
+            "copy": {
+                "title": "Copier dans le presse-papiers",
+                "desc": "Copier \"{}\" ?",
+                "fat32_title": "Limite FAT32",
+                "fat32_desc": "\"{}\" dépasse 4 Go et ne peut pas être copié sur un lecteur FAT32."
+            },
+            "paste": {
+                "confirm_title": "Coller ici",
+                "confirm_desc": "Coller \"{}\" dans ce dossier ?",
+                "overwrite_title": "Fichier existant",
+                "overwrite_desc": "\"{}\" existe déjà. Écraser ?",
+                "error_title": "Impossible de coller",
+                "error_same": "Source et destination identiques.",
+                "done_title": "Terminé",
+                "done_desc": "\"{}\" copié avec succès.",
+                "fail_title": "Échec de la copie",
+                "fail_desc": "Échec de la copie."
+            },
+            "delete": {
+                "confirm_title": "Supprimer ?",
+                "confirm_desc": "Supprimer \"{}\" ?\nImpossible d'annuler.",
+                "done_title": "Supprimé",
+                "done_desc": "\"{}\" supprimé.",
+                "fail_title": "Échec de la suppression",
+                "fail_desc": "Échec de la suppression."
+            }
+        },
+        "net": {
+            "top_info": "Connexion à Quark...",
+            "top_info2": "Sélectionner les fichiers à installer",
+            "connecting": "Connexion à Quark...",
+            "no_drives": "Quark n'a signalé aucun lecteur.",
+            "buttons": " Installer     Tout sélectionner     Aide     Retour",
+            "buttons2": " Installer     Tout sélectionner     Aide     Retour",
+            "ip": {
+                "title": "Adresse IP de Quark",
+                "desc": "Entrez l'adresse IP du PC exécutant Quark.",
+                "select_desc": "Sélectionnez un hôte enregistré ou saisissez-en un nouveau.",
+                "name_desc": "Entrez un nom pour cet hôte (ex. \"PC maison\")",
+                "save_title": "Sauvegarder l'hôte ?",
+                "save_desc": "Sauvegarder cet hôte pour une utilisation future ?"
+            },
+            "connect_fail": {
+                "title": "Connexion échouée",
+                "desc": "Impossible de se connecter à Quark. Vérifiez que Quark est en cours d'exécution et que l'adresse IP est correcte."
+            },
+            "source_string": " via Quark (LAN)",
+            "new_host": "Saisir un nouvel hôte...",
+            "host": {
+                "buttons": " Ajouter hôte     Supprimer hôte     Retour",
+                "delete_title": "Supprimer l'hôte ?",
+                "delete_desc": "Supprimer \"{}\" des hôtes enregistrés ?"
+            },
+            "connecting_buttons": " Annuler",
+            "connect_cancel": " Annuler"
+        },
+        "already_installed": {
+            "title": "Déjà installé",
+            "same_version": "Cette version est déjà installée. La réinstaller ?",
+            "diff_version": "Une version différente de ce titre est déjà installée. La remplacer ?",
+            "reinstall": "Réinstaller"
+        },
+        "gc": {
+            "title": "Installateur de cartouche",
+            "status": {
+                "no_card": "Statut : Aucune cartouche",
+                "detecting": "Statut : Cartouche détectée, montage en cours...",
+                "ready": "Statut : Cartouche montée et prête",
+                "failed": "Statut : Échec du montage de la cartouche"
+            },
+            "no_card_text": "Aucune cartouche insérée",
+            "install_sd": "Installer sur la carte SD",
+            "install_nand": "Installer dans la mémoire système (NAND)",
+            "select_content": "Sélectionner le contenu à installer...",
+            "nothing_selected_label": "Rien de sélectionné",
+            "no_content": "Aucun contenu installable trouvé",
+            "base_version": "Base 1.0.0",
+            "update_label": "Mise à jour",
+            "base_label": "Jeu de base",
+            "update_data_label": "Données de mise à jour",
+            "install_dialog": {
+                "title": "Installation depuis la cartouche",
+                "no_content_desc": "Aucune cartouche montée ou aucun contenu installable trouvé."
+            },
+            "nothing_selected_dialog": {
+                "title": "Rien de sélectionné",
+                "desc": "Sélectionnez au moins un type de contenu à installer."
+            },
+            "update_not_selected": {
+                "title": "Données de mise à jour non sélectionnées",
+                "desc": "Cette cartouche contient des données de mise à jour non sélectionnées.\n\nCertains jeux nécessitent la mise à jour avant le lancement.\nUn message sur des données manquantes peut apparaître.\n\nContinuer avec le jeu de base uniquement ?",
+                "continue": "Continuer"
+            },
+            "sigpatches": {
+                "title": "Patches de signature non détectés",
+                "desc": "Aucun patch de signature n'a été détecté sur cette console.\n\nL'installation de logiciels non officiels sans patches de signature\npeut entraîner une installation non fonctionnelle.\n\nContinuer quand même ?"
+            },
+            "details": {
+                "title": "Détails de la cartouche",
+                "title_label": "Titre :  ",
+                "author_label": "Auteur : ",
+                "keygen_label": "Génération de clé : ",
+                "totalsize_label": "Taille totale : ",
+                "base_line": "Base :  1.0.0\n",
+                "update_label": "Mise à jour : "
+            },
+            "verify_repair": "Vérifier et réparer le contenu (plus lent)",
+            "tools_item": "Outils...",
+            "buttons": " Sélectionner     Retour     Afficher les détails",
+            "insert_hint": "Insérez une cartouche pour afficher son contenu",
+            "unknown_title": "Cartouche détectée",
+            "unknown_author": "Impossible de lire les informations du titre",
+            "base_short_label": "Base",
+            "dlc_label": "DLC",
+            "dlc_count_desc0": "DLC (",
+            "dlc_count_desc1": " pack(s))",
+            "appid_label": "ID d'appli : ",
+            "size_label": "Taille : ",
+            "unknown_version": "(inconnue)",
+            "install_button": "Installer",
+            "list_and": " et ",
+            "no_gamecard_mounted": "Aucune cartouche insérée.",
+            "tools_hint": " Sélectionner     Retour",
+            "fix_update_item": "Corriger l'invite « mise à jour disponible »",
+            "selection_hint": " Basculer     Tout sélectionner / Aucun     Retour",
+            "install_confirm": {
+                "title": "Installer depuis la cartouche",
+                "desc0": "Installer ",
+                "desc1": " depuis\n",
+                "desc2": "\nvers ",
+                "desc3": " ?"
+            },
+            "nothing_to_fix": {
+                "title": "Rien à corriger",
+                "desc": "Ce jeu n'est pas installé numériquement sur cette console,\nil n'y a donc pas d'indicateur numérique « mise à jour disponible » à corriger."
+            },
+            "fixed": {
+                "title": "Corrigé",
+                "desc": "L'indicateur de mise à jour requise pour ce jeu a été réinitialisé\npour correspondre à ce qui est réellement installé numériquement.\n\nRemarque : rejouer à cette cartouche peut faire réapparaître\nl'invite, car la console redétecte alors la mise à jour\nprésente sur la cartouche elle-même."
+            }
+        },
+        "downgrade": {
+            "title": "Avertissement de rétrogradation",
+            "desc": "Vous installez une version plus ancienne sur une version plus récente.\n\nRétrograder peut causer la corruption ou la perte de données de sauvegarde,\net rendre le jeu injouable.\n\nProcéder à la rétrogradation ?",
+            "proceed": "Rétrograder"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "Ignorez la version minimale de firmware requise par les jeux",
+            "ask_delete": "Demande de suppression des fichiers originaux après l'installation",
+            "language": "Langage: ",
+            "check_update": "Vérifier les mises à jour de Leaflet",
+            "credits": "Crédits",
+            "sound": "Activer les sons",
+            "auto_skip_reinstall": "Ignorer automatiquement les invites de réinstallation",
+            "cancel_queue_on_error": "Annuler la file d'attente en cas d'erreur d'installation",
+            "verbose_logging": "Journaux d'installation détaillés",
+            "screen_dim_disable": "Désactiver l'assombrissement de l'écran pendant l'installation",
+            "screen_dim_delay": "Délai avant assombrissement de l'écran",
+            "fix_update_flags": "Corriger les indicateurs de mise à jour",
+            "manage_titles": "Gérer les jeux installés",
+            "emummc_check": "Avertir si pas sur emuMMC",
+            "sigpatch_check": "Désactiver la vérification fs-patch"
+        },
+        "update": {
+            "title": "Mise à jour disponible",
+            "desc0": "Leaflet ",
+            "desc1": " est disponible dès maintenant ! Prêt à mettre à jour ?",
+            "opt0": "Mise à jour",
+            "top_info": "Mise à jour de Leaflet ",
+            "bot_info": "Téléchargement de Leaflet ",
+            "bot_info2": "Extraction de Leaflet ",
+            "complete": "Mise à jour complète !",
+            "failed": "La mise à jour a échoué !",
+            "end_desc": "Le logiciel sera maintenant fermé.",
+            "title_check_fail": "Aucune mise à jour trouvée",
+            "desc_check_fail": "Vous êtes sur la dernière version de Leaflet !"
+        },
+        "credits": {
+            "title": "Merci aux personnes suivantes !",
+            "desc": "- XorTroll pour Plutonium et Goldleaf\n- L'équipe Atmosphere pour libhaze\n- DarkMatterCore pour libusbhsfs\n- ITotalJustice pour Gamecard-Installer-NX\n- luketanti pour l'interface de base\n- La communauté Homebrew pour tout leur travail et leur dévouement\n- Toi, pour utiliser Leaflet !"
+        },
+        "language": {
+            "title": "Sélectionnez la langue de Leaflet",
+            "desc": "Le logiciel sera fermé après avoir changé de langue. Appuyez sur B pour annuler.",
+            "system_language": "Système"
+        },
+        "title": "Modifiez les paramètres de Leaflet !",
+        "buttons": " Sélectionner/Modifier     Annuler",
+        "appearance": {
+            "section": "Apparence",
+            "select_preset": "Sélectionner un thème prédéfini...",
+            "custom_theme": "Thème personnalisé...",
+            "import_theme": "Importer un thème sauvegardé...",
+            "reset_theme": "Réinitialiser le thème par défaut",
+            "bg_color": "Couleur de fond",
+            "panel_color": "Couleur du panneau",
+            "bar_color": "Couleur de la barre",
+            "highlight_color": "Couleur de sélection",
+            "menu_highlight_color": "Couleur de sélection du menu",
+            "dialog_bg_color": "Couleur de fond des boîtes de dialogue",
+            "dialog_border_color": "Couleur de bordure des boîtes de dialogue",
+            "gradient_start": "Début du dégradé",
+            "gradient_end": "Fin du dégradé",
+            "gradient_type": "Type de dégradé",
+            "gradient_type_linear": "Linéaire",
+            "gradient_type_radial": "Radial",
+            "gradient_type_dialog": {
+                "desc": "Choisissez comment le dégradé d'arrière-plan passe d'une couleur à l'autre."
+            },
+            "gradient_type_set": {
+                "title": "Type de dégradé défini",
+                "desc_suffix": " sélectionné.\n\nAppuyez sur « Regénérer le dégradé d'arrière-plan »\npour l'appliquer immédiatement."
+            },
+            "gradient_angle": "Angle du dégradé",
+            "gradient_angle_set": {
+                "title": "Angle du dégradé défini",
+                "desc_suffix": " défini.\n\nAppuyez sur « Regénérer le dégradé d'arrière-plan »\npour l'appliquer immédiatement."
+            },
+            "invalid_angle": {
+                "title": "Angle invalide",
+                "desc": "Entrez un nombre entier de degrés entre 0 et 359.\nLa valeur n'a pas été appliquée."
+            },
+            "regen_gradient": "Regénérer le dégradé d'arrière-plan",
+            "invalid_color": {
+                "title": "Couleur invalide",
+                "desc": "Entrez une couleur au format #RRGGBBAA avec les chiffres hex 0–9 et A–F.\nExemple : #8D00FFBF\nLa valeur n'a pas été appliquée."
+            },
+            "color_applied": {
+                "title": "Couleur appliquée",
+                "desc0": "défini sur ",
+                "desc1": ".\n\nLes couleurs prennent effet immédiatement."
+            },
+            "gradient_start_set": {
+                "title": "Début du dégradé défini",
+                "desc0": "Couleur de début définie sur ",
+                "desc1": ".\n\nAppuyez sur \"Regénérer le dégradé d'arrière-plan\"\npour appliquer le nouveau dégradé immédiatement."
+            },
+            "gradient_end_set": {
+                "title": "Fin du dégradé définie",
+                "desc0": "Couleur de fin définie sur ",
+                "desc1": ".\n\nAppuyez sur \"Regénérer le dégradé d'arrière-plan\"\npour appliquer le nouveau dégradé immédiatement."
+            },
+            "gradient_regen": {
+                "title": "Arrière-plan regénéré",
+                "desc": "Le dégradé d'arrière-plan a été regénéré\net appliqué immédiatement."
+            },
+            "theme_applied": {
+                "title": "Thème appliqué",
+                "desc_suffix": "appliqué immédiatement,\ny compris le dégradé d'arrière-plan."
+            },
+            "theme_reset": {
+                "title": "Thème réinitialisé",
+                "desc": "Couleurs réinitialisées aux valeurs par défaut de Leaflet\net appliquées immédiatement."
+            },
+            "select_theme_dialog": {
+                "title": "Sélectionner un thème",
+                "desc": "Choisissez un thème de couleurs. Les modifications s'appliquent immédiatement."
+            }
+        },
+        "theme_manager": {
+            "page_title": "Gestionnaire de thèmes",
+            "buttons": " Appliquer  Exporter le thème actuel  Supprimer / Infos  Retour",
+            "export_item": "Exporter le thème actuel...",
+            "import_item": "Importer un thème...",
+            "export_dialog": {
+                "title": "Thème exporté",
+                "name_prompt": "Nom du thème"
+            },
+            "export_failed": {
+                "title": "Échec de l'export",
+                "desc": "Impossible d'écrire le fichier de thème.\nVérifiez l'espace disponible sur la carte SD."
+            },
+            "theme_applied": {
+                "title": "Thème appliqué",
+                "desc_suffix": "appliqué immédiatement."
+            },
+            "delete_dialog": {
+                "title": "Supprimer le thème",
+                "desc_suffix": "?\nCette action est irréversible."
+            },
+            "quick_export": {
+                "title": "Thème exporté",
+                "failed_title": "Échec de l'export",
+                "failed_desc": "Impossible d'écrire le fichier de thème."
+            },
+            "import_browse": {
+                "title": "Importer un thème",
+                "buttons": " Sélectionner  Annuler",
+                "empty": "Aucun fichier .leaflet.theme trouvé ici."
+            },
+            "import_done": {
+                "title": "Thème importé",
+                "desc_suffix": " a été importé.\nSélectionnez-le dans la liste ci-dessus pour l'appliquer."
+            },
+            "import_invalid": {
+                "title": "Échec de l'importation",
+                "desc": "Ce fichier ne semble pas être un fichier .leaflet.theme valide."
+            },
+            "import_failed": {
+                "title": "Échec de l'importation",
+                "desc": "Impossible de copier le fichier de thème.\nVérifiez que la carte SD dispose d'espace libre."
+            },
+            "info_dialog": {
+                "title": "À propos des thèmes",
+                "desc_prefix": "Les thèmes exportés sont enregistrés dans :\n",
+                "desc_suffix": "\n\nPlacez-y un fichier .leaflet.theme pour le rendre disponible ici,\nou sélectionnez « Importer un thème... » ci-dessus pour en copier un automatiquement."
+            }
+        },
+        "dim_delay": {
+            "title": "Délai avant assombrissement de l'écran",
+            "desc": "Durée d'attente avant d'assombrir l'écran pendant une installation.",
+            "options": [
+                "15 secondes",
+                "30 secondes",
+                "1 minute",
+                "2 minutes",
+                "5 minutes",
+                "10 minutes",
+                "Jamais (désactivé)"
+            ]
+        },
+        "fix_update_flags_dialog": {
+            "desc": "Ceci réinitialise l'indicateur « mise à jour disponible » pour chaque\njeu installé numériquement sur cette console, pour qu'il corresponde\nà ce qui est réellement installé.\n\nAucun contenu de jeu n'est installé, supprimé ou modifié.",
+            "confirm_all": "Corriger maintenant",
+            "confirm_one": "Choisir un jeu..."
+        },
+        "fix_update_flags_done": {
+            "title": "Terminé",
+            "desc_suffix": " jeu(x) vérifié(s)."
+        },
+        "fix_update_flags_picker": {
+            "empty": "Aucun jeu installé numériquement n'a été trouvé."
+        },
+        "fix_update_flags_done_one": {
+            "desc_suffix": " a été vérifié."
+        },
+        "title_manage": {
+            "sd_card": "carte SD",
+            "internal": "mémoire interne",
+            "delete_all": "Supprimer ce jeu entièrement...",
+            "delete_piece_dialog": {
+                "title": "Supprimer le contenu",
+                "desc_suffix": " ?\nCela libère l'espace immédiatement et ne peut pas être annulé.",
+                "confirm": "Supprimer"
+            },
+            "piece_deleted": {
+                "title": "Supprimé",
+                "desc": "Ce contenu a été supprimé."
+            },
+            "delete_all_dialog": {
+                "title": "Supprimer le jeu entier",
+                "desc_suffix": " et tout ce qui y est installé (jeu de base, mise à jour et DLC)\nsera définitivement supprimé de cette console.\n\nCette action ne supprime pas les données de sauvegarde.\n\nCette action est irréversible.",
+                "confirm": "Tout supprimer"
+            },
+            "title_deleted": {
+                "title": "Supprimé",
+                "desc": "Le jeu et tout son contenu ont été supprimés."
+            },
+            "delete_failed": {
+                "title": "Échec de la suppression",
+                "desc": "Un problème est survenu et le jeu n'a pas pu être entièrement supprimé.\nConsultez le journal de débogage pour plus de détails."
+            },
+            "override_warning": {
+                "title_prefix": "Ce titre est actuellement utilisé (",
+                "desc": "Ce titre est actuellement utilisé pour exécuter le menu homebrew en\nmode title takeover. Supprimer cette appli fera planter Atmosphère au\nretour au menu HOME.\n\nVous pouvez tout de même supprimer l'appli si vous êtes conscient du risque.",
+                "confirm": "Supprimer quand même"
+            }
+        },
+        "emummc_check": {
+            "blocked": {
+                "title": "emuMMC non détecté",
+                "desc": "Vous n'utilisez actuellement pas Leaflet sur votre emuMMC.\n\nInstaller vos dumps de jeu sur votre sysMMC *entraînera* le\n*BANNISSEMENT* de votre console si vous vous connectez en ligne.\n\nSi vous êtes conscient des risques mais souhaitez quand même\ndésactiver cette vérification, vous pouvez le faire dans\nParamètres -> Général -> « Avertir si pas sur emuMMC ».\n\nNotez bien que c'est *DÉCONSEILLÉ*, et qu'aucune assistance ne sera\nfournie en cas de problème."
+            },
+            "disable_warn": {
+                "title": "Désactiver la vérification emuMMC",
+                "desc": "Cette vérification existe pour vous éviter d'installer accidentellement\nvos dumps de jeu sur votre sysMMC au lieu d'une emuMMC.\n\nLa désactiver signifie que Leaflet ne vous avertira plus si vous n'êtes\npas démarré sur votre emuMMC.\n\nAppuyez sur « Continuer » pour démarrer une attente de 10 secondes\navant de pouvoir confirmer.",
+                "begin": "Continuer",
+                "countdown_suffix": "s restantes...",
+                "final_desc": "L'attente est terminée. Désactiver cette vérification ?",
+                "confirm": "La désactiver"
+            }
+        },
+        "sigpatch_check": {
+            "blocked": {
+                "title": "Patchs de signature non détectés",
+                "desc": "fs-patch ne semble pas actif ou ses patchs n'ont pas été appliqués.\n\nfs et ldr doivent être patchés avant d'installer des titres.\n\nAssurez-vous que fs-patch est installé et s'est exécuté au moins une\nfois, puis redémarrez et réessayez.\n\nSachez que cette vérification existe avant tout pour éviter que vous\ninstalliez accidentellement vos dumps de jeu sur votre sysMMC.\n\nSi vous souhaitez la désactiver malgré les risques encourus, ou si\nvous utilisez une autre méthode pour patcher FS et LDR, vous pouvez le\nfaire dans Paramètres -> Général -> « Désactiver la vérification\nfs-patch »."
+            },
+            "disable_warn": {
+                "title": "Désactiver la vérification fs-patch",
+                "desc": "La désactiver signifie que Leaflet ne vous avertira plus si fs-patch\nn'est pas détecté. Si vous utilisez une autre méthode pour patcher FS\net LDR, vous pouvez désactiver cette vérification.\n\nAppuyez sur « Continuer » pour démarrer une attente de 10 secondes\navant de pouvoir confirmer.",
+                "begin": "Continuer",
+                "countdown_suffix": "s restantes...",
+                "final_desc": "L'attente est terminée. Désactiver cette vérification ?",
+                "confirm": "La désactiver"
+            }
+        }
+    },
+    "common": {
+        "ok": "OK",
+        "cancel": "Annuler",
+        "close": "Fermer",
+        "yes": "Oui",
+        "no": "Non",
+        "cancel_desc": "Appuyez sur B pour annuler"
+    }
+}

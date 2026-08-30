@@ -1,0 +1,541 @@
+{
+    "main": {
+        "menu": {
+            "sd": "通過SD卡安裝",
+            "hdd": "通過 USB SSD/HDD 安裝",
+            "usb": "透過 Quark 安裝",
+            "gc": "從遊戲卡安裝",
+            "set": "設置",
+            "exit": "退出",
+            "browser": "檔案瀏覽器",
+            "net": "網路 (Quark)"
+        },
+        "usb": {
+            "warn": {
+                "title": "警告！",
+                "desc": "USB安裝方式不一定能“正常工作”。\n如果您不幸遇到這樣的情況，那就用力扯自己的頭髮吧！\n推薦在PC端使用Quark配合安裝。\n還是不行就通過網路安裝吧...",
+                "opt1": "不再對此進行警告"
+            },
+            "error": {
+                "title": "USB未連接",
+                "desc": "請通過USB線連接您的遠程設備"
+            }
+        },
+        "hdd": {
+            "title": "未偵測到 USB 裝置",
+            "notfound": "請連接 USB SSD 或硬碟後再進行安裝。"
+        },
+        "applet": {
+            "title": "不支援Applet模式",
+            "desc": "您可以嘗試在“Applet模式”下使用本程式,但如果出現問題請切換到“非Applet模式”再運行。\n切換方法：\n 退回系統桌面選中任意一個遊戲，按住後點進入遊戲，直到跳回hbmenu界面再鬆開按鈕!\n然後再選擇Leaflet，屆時將不會彈出此對話框！"
+        },
+        "buttons": " 選擇  退出",
+        "info": {
+            "button": " 資訊",
+            "sd": "安裝儲存在 SD 卡中的 NSP/NSZ/XCI/XCZ 檔案。",
+            "hdd": "直接從已連接的 USB SSD 或硬碟安裝檔案。",
+            "usb": "使用 Quark 等工具透過 USB 安裝。",
+            "gc": "直接從插入的遊戲卡安裝遊戲。",
+            "set": "變更 Leaflet 偏好與商店設定。",
+            "exit": "關閉 Leaflet 並返回 HOME。",
+            "browser": "瀏覽SD卡，並為包含分割遊戲檔案的資料夾設定存檔位。",
+            "net": "透過區域網路從執行 Quark 的 PC 安裝遊戲。"
+        },
+        "quark": {
+            "choose": {
+                "title": "透過 Quark 安裝",
+                "desc": "選擇連線到 PC 上 Quark 的方式。",
+                "usb": "USB",
+                "net": "無線 (LAN)"
+            }
+        }
+    },
+    "inst": {
+        "sd": {
+            "help": {
+                "title": "幫助",
+                "desc": "複製您的 NSP, NSZ, XCI, XCZ 文件到SD卡, \n選擇想要安裝的文件，然後按  安裝！"
+            },
+            "top_info": "選擇想要安裝的文件，然後按  安裝！",
+            "source_string": " 從SD卡",
+            "delete_info": " 安裝完成！要將原文件從SD卡刪除嗎？",
+            "delete_info_multi": " 所有文件已安裝！要把所有原文件從SD卡刪除嗎？",
+            "delete_desc": "安裝成功後已經不需要原文件。",
+            "buttons": " 安裝     全選     存檔位     說明     取消"
+        },
+        "hdd": {
+            "help": {
+                "title": "幫助",
+                "desc": "連接 USB SSD 或硬碟，瀏覽並選取 NSP、NSZ、XCI 或 XCZ 檔案，然後按下  鍵開始安裝。"
+            },
+            "top_info": "選擇要安裝的檔案，然後按下  鍵開始安裝！",
+            "source_string": " 來自 USB 裝置",
+            "delete_info": " 安裝完成！是否從 USB 裝置中刪除此檔案？",
+            "delete_info_multi": " 個檔案已成功安裝！是否從 USB 裝置中刪除這些檔案？",
+            "delete_desc": "安裝完成後便不再需要保留原始檔案",
+            "buttons": " 安裝     全選     存檔位     說明     取消"
+        },
+        "usb": {
+            "help": {
+                "title": "幫助",
+                "desc": "你的遊戲檔案可以透過 Quark 進行安裝。\n請在 PC 上開啟 Quark，設定一個（或多個！）路徑\n以便快速存取，然後選擇想要安裝的遊戲檔案！"
+            },
+            "top_info": "USB連接成功! 正在接收文件列表...",
+            "top_info2": "選擇您想通過USB安裝的文件, 然後按  安裝",
+            "error": "USB傳輸超時...",
+            "source_string": " 透過 Quark (USB)",
+            "buttons": " (按住) 幫助  (按住) 取消",
+            "buttons2": " 選擇文件  全選  安裝文件  取消"
+        },
+        "target": {
+            "desc0": "將 ",
+            "desc1": " 安裝到哪？",
+            "desc00": "將已選擇的 ",
+            "desc01": " 文件安裝到哪?",
+            "opt0": "SD卡",
+            "opt1": "內部閃存"
+        },
+        "info_page": {
+            "top_info0": "正在安裝 ",
+            "verifying": "正在驗證 ",
+            "preparing": "初始化安裝...",
+            "failed": "安裝失敗 ",
+            "failed_desc": "可以從系統設置中刪除部分安裝的內容。",
+            "complete": "安裝完成",
+            "desc0": " 安裝成功!",
+            "desc1": " 已安裝!",
+            "downloading": "下載中 ",
+            "at": " 在 "
+        },
+        "finished": [
+            "安裝完成！",
+            "完成！",
+            "全部結束。",
+            "可以遊玩了。",
+            "安裝成功。"
+        ],
+        "archivebit": {
+            "title": "已設置存檔位",
+            "desc": "該資料夾現在被視為檔案，可以選擇進行安裝。",
+            "confirm_title": "設置存檔位？",
+            "confirm_desc": "這將把\"{}\"標記為檔案。\n此操作無法在Leaflet中復原。",
+            "error_desc": "存檔位僅在SD卡上受支援。"
+        },
+        "browser": {
+            "top_info": "選擇要瀏覽的磁碟機：",
+            "buttons": " 封存位元     複製     貼上     刪除     說明     返回",
+            "help": {
+                "title": "說明",
+                "desc": "瀏覽檔案與資料夾。\nA：開啟資料夾\nB：返回上層 / 磁碟機清單 / 主選單\nZL：為選取的資料夾設定封存位元\nR：將選取項目複製到剪貼簿\nZR：將剪貼簿內容貼上到此處\nY：刪除選取項目\nX：此說明畫面"
+            },
+            "drive": {
+                "sd": "SD 記憶卡"
+            },
+            "copy": {
+                "title": "複製到剪貼簿",
+                "desc": "將「{}」複製到剪貼簿？",
+                "fat32_title": "FAT32 大小限制",
+                "fat32_desc": "「{}」大於 4 GB，無法複製到 FAT32 格式的磁碟機。請將磁碟機重新格式化為 exFAT 以複製大於 4 GB 的檔案。"
+            },
+            "paste": {
+                "confirm_title": "貼上到此處",
+                "confirm_desc": "將「{}」貼上到目前資料夾？",
+                "overwrite_title": "檔案已存在",
+                "overwrite_desc": "「{}」在此處已存在。覆蓋？",
+                "error_title": "無法貼上",
+                "error_same": "來源與目的地相同。",
+                "done_title": "完成",
+                "done_desc": "「{}」已成功複製。",
+                "fail_title": "複製失敗",
+                "fail_desc": "複製檔案失敗。"
+            },
+            "delete": {
+                "confirm_title": "刪除？",
+                "confirm_desc": "刪除「{}」？\n此操作無法復原。",
+                "done_title": "已刪除",
+                "done_desc": "「{}」已被刪除。",
+                "fail_title": "刪除失敗",
+                "fail_desc": "刪除項目失敗。"
+            }
+        },
+        "net": {
+            "top_info": "正在連線到 Quark...",
+            "top_info2": "選擇要安裝的檔案",
+            "connecting": "正在連線到 Quark...",
+            "no_drives": "Quark 未回報任何磁碟機或特殊路徑。",
+            "buttons": " 安裝     全選     說明     返回",
+            "buttons2": " 安裝     全選     說明     返回",
+            "ip": {
+                "title": "輸入 Quark PC 的 IP",
+                "desc": "輸入執行 Quark 的 PC 的 IP 位址（例如 192.168.1.10）。\n請確認 Quark 已啟用網路支援並正在執行。",
+                "select_desc": "選擇已儲存的主機或輸入新主機。",
+                "name_desc": "輸入此主機的名稱（例如「家用PC」）",
+                "save_title": "儲存主機？",
+                "save_desc": "是否儲存此主機以供日後使用？"
+            },
+            "connect_fail": {
+                "title": "連線失敗",
+                "desc": "無法連線到 Quark。請確認 Quark 已在 PC 上啟用網路支援並執行，且 IP 位址正確。"
+            },
+            "source_string": " 透過 Quark (LAN)",
+            "new_host": "輸入新主機...",
+            "host": {
+                "buttons": " 新增主機     刪除主機     返回",
+                "delete_title": "刪除主機？",
+                "delete_desc": "從已儲存的主機中刪除「{}」？"
+            },
+            "connecting_buttons": " 取消",
+            "connect_cancel": " 取消"
+        },
+        "already_installed": {
+            "title": "已安裝",
+            "same_version": "此版本已安裝。重新安裝？",
+            "diff_version": "此遊戲的其他版本已安裝。取代？",
+            "reinstall": "重新安裝"
+        },
+        "gc": {
+            "title": "遊戲卡安裝程式",
+            "status": {
+                "no_card": "狀態：無遊戲卡",
+                "detecting": "狀態：偵測到遊戲卡，掛載中...",
+                "ready": "狀態：遊戲卡已掛載且就緒",
+                "failed": "狀態：遊戲卡掛載失敗"
+            },
+            "no_card_text": "未插入遊戲卡",
+            "install_sd": "安裝至SD卡",
+            "install_nand": "安裝至系統記憶體（NAND）",
+            "select_content": "選擇要安裝的內容...",
+            "nothing_selected_label": "未選擇任何內容",
+            "no_content": "未找到可安裝的內容",
+            "base_version": "基礎版 1.0.0",
+            "update_label": "更新",
+            "base_label": "基礎遊戲",
+            "update_data_label": "更新資料",
+            "install_dialog": {
+                "title": "從遊戲卡安裝",
+                "no_content_desc": "未掛載遊戲卡或未找到可安裝的內容。"
+            },
+            "nothing_selected_dialog": {
+                "title": "未選擇任何內容",
+                "desc": "請至少選擇一種內容類型進行安裝。"
+            },
+            "update_not_selected": {
+                "title": "未選擇更新資料",
+                "desc": "此遊戲卡包含您未選擇的更新資料。\n\n部分遊戲在啟動前需要安裝更新。\n啟動時可能會出現缺少資料的提示。\n\n僅安裝基礎遊戲繼續嗎？",
+                "continue": "繼續"
+            },
+            "sigpatches": {
+                "title": "未偵測到簽名修補程式",
+                "desc": "未在此主機上偵測到簽名修補程式。\n\n未安裝簽名修補程式時安裝非官方軟體\n可能導致安裝無法正常使用。\n\n仍要繼續嗎？"
+            },
+            "details": {
+                "title": "遊戲卡詳細資訊",
+                "title_label": "標題：  ",
+                "author_label": "作者： ",
+                "keygen_label": "金鑰版本： ",
+                "totalsize_label": "總大小： ",
+                "base_line": "本體：1.0.0\n",
+                "update_label": "更新： "
+            },
+            "verify_repair": "驗證並修復內容（速度較慢）",
+            "tools_item": "工具...",
+            "buttons": " 選擇     返回     顯示詳細資訊",
+            "insert_hint": "插入遊戲卡以檢視其內容",
+            "unknown_title": "已偵測到遊戲卡",
+            "unknown_author": "無法讀取標題資訊",
+            "base_short_label": "本體",
+            "dlc_label": "DLC",
+            "dlc_count_desc0": "DLC（",
+            "dlc_count_desc1": " 個）",
+            "appid_label": "應用程式 ID：",
+            "size_label": "大小：",
+            "unknown_version": "（未知）",
+            "install_button": "安裝",
+            "list_and": "和",
+            "no_gamecard_mounted": "未插入遊戲卡。",
+            "tools_hint": " 選擇     返回",
+            "fix_update_item": "修復「有可用更新」提示",
+            "selection_hint": " 切換     全選/取消全選     返回",
+            "install_confirm": {
+                "title": "從遊戲卡安裝",
+                "desc0": "安裝",
+                "desc1": "\n（來自：",
+                "desc2": "）\n安裝位置：",
+                "desc3": "？"
+            },
+            "nothing_to_fix": {
+                "title": "無需修復",
+                "desc": "此遊戲未以數位版形式安裝在本主機上，\n因此沒有需要修復的數位「有可用更新」標記。"
+            },
+            "fixed": {
+                "title": "已修復",
+                "desc": "此遊戲的「需要更新」標記已重設，\n以符合實際安裝的數位版內容。\n\n注意：再次遊玩此卡帶可能會導致該提示\n再次出現，因為主機會重新偵測\n卡帶本身攜帶的更新。"
+            }
+        },
+        "downgrade": {
+            "title": "降級警告",
+            "desc": "您正在將較新版本替換為較舊版本。\n\n降級可能導致存檔資料損毀或遺失，\n並可能使遊戲無法執行。\n\n確認降級？",
+            "proceed": "降級"
+        }
+    },
+    "options": {
+        "menu_items": {
+            "ignore_firm": "忽略固件版本要求",
+            "ask_delete": "安裝後詢問是否刪除原文件",
+            "language": "語言： ",
+            "check_update": "檢測更新",
+            "credits": "致谢",
+            "sound": "啟用音效",
+            "auto_skip_reinstall": "自動略過重新安裝提示",
+            "cancel_queue_on_error": "安裝錯誤時取消佇列",
+            "verbose_logging": "詳細安裝紀錄",
+            "screen_dim_disable": "安裝期間停用螢幕變暗",
+            "screen_dim_delay": "螢幕變暗延遲",
+            "fix_update_flags": "修復更新提示標記",
+            "manage_titles": "管理已安裝的遊戲",
+            "emummc_check": "不在 emuMMC 時警告",
+            "sigpatch_check": "關閉 fs-patch 檢查"
+        },
+        "update": {
+            "title": "有新版本可以更新",
+            "desc0": "Leaflet ",
+            "desc1": " 新的更新！ 要繼續嗎？",
+            "opt0": "更新",
+            "top_info": "正在更新 ...",
+            "bot_info": "正在下載 ...",
+            "bot_info2": "正在解壓 ...",
+            "complete": "更新完成！",
+            "failed": "更新失敗！",
+            "end_desc": "本程式將關閉！",
+            "title_check_fail": "找不到更新",
+            "desc_check_fail": "已更新到最新版！"
+        },
+        "credits": {
+            "title": "感謝下列人士",
+            "desc": "- XorTroll 提供 Plutonium 和 Goldleaf\n- Atmosphere 團隊提供 libhaze\n- DarkMatterCore 提供 libusbhsfs\n- ITotalJustice 提供 Gamecard-Installer-NX\n- luketanti 提供基礎介面\n- 感謝 Homebrew 社群的辛勤付出與熱情\n- 感謝你使用 Leaflet！"
+        },
+        "language": {
+            "title": "選擇語言",
+            "desc": "更改語言後本程式將關閉，請重新打開， 或按  返回。",
+            "system_language": "系統默認"
+        },
+        "title": "更改 Leaflet 的設置！",
+        "buttons": " 選擇/更改  取消",
+        "appearance": {
+            "section": "外觀",
+            "select_preset": "選擇預設主題...",
+            "custom_theme": "自訂主題...",
+            "import_theme": "匯入已儲存的主題...",
+            "reset_theme": "還原預設主題",
+            "bg_color": "背景顏色",
+            "panel_color": "面板顏色",
+            "bar_color": "列顏色",
+            "highlight_color": "醒目顯示顏色",
+            "menu_highlight_color": "選單醒目顯示顏色",
+            "dialog_bg_color": "對話框背景顏色",
+            "dialog_border_color": "對話框邊框顏色",
+            "gradient_start": "漸層起始色",
+            "gradient_end": "漸層結束色",
+            "gradient_type": "漸層類型",
+            "gradient_type_linear": "線性",
+            "gradient_type_radial": "放射狀",
+            "gradient_type_dialog": {
+                "desc": "選擇背景漸層在兩種顏色之間的過渡方式。"
+            },
+            "gradient_type_set": {
+                "title": "漸層類型已設定",
+                "desc_suffix": "漸層已選擇。\n\n按下「重新產生背景漸層」\n立即套用。"
+            },
+            "gradient_angle": "漸層角度",
+            "gradient_angle_set": {
+                "title": "漸層角度已設定",
+                "desc_suffix": "度角已設定。\n\n按下「重新產生背景漸層」\n立即套用。"
+            },
+            "invalid_angle": {
+                "title": "角度無效",
+                "desc": "請輸入 0 到 359 之間的整數角度。\n該數值未套用。"
+            },
+            "regen_gradient": "重新產生背景漸層",
+            "invalid_color": {
+                "title": "無效顏色",
+                "desc": "請以 #RRGGBBAA 格式輸入顏色，使用十六進位數字 0–9 和 A–F。\n範例：#8D00FFBF\n該值未被套用。"
+            },
+            "color_applied": {
+                "title": "顏色已套用",
+                "desc0": "已設定為 ",
+                "desc1": "。\n\n顏色立即生效。"
+            },
+            "gradient_start_set": {
+                "title": "漸層起始色已設定",
+                "desc0": "起始色已設定為 ",
+                "desc1": "。\n\n請按重新產生背景漸層\n立即套用新漸層。"
+            },
+            "gradient_end_set": {
+                "title": "漸層結束色已設定",
+                "desc0": "結束色已設定為 ",
+                "desc1": "。\n\n請按重新產生背景漸層\n立即套用新漸層。"
+            },
+            "gradient_regen": {
+                "title": "背景已重新產生",
+                "desc": "背景漸層已重新產生\n並立即套用。"
+            },
+            "theme_applied": {
+                "title": "主題已套用",
+                "desc_suffix": "已立即套用，\n包括背景漸層。"
+            },
+            "theme_reset": {
+                "title": "主題已重置",
+                "desc": "顏色已重置為 Leaflet 預設值\n並立即套用。"
+            },
+            "select_theme_dialog": {
+                "title": "選擇主題",
+                "desc": "選擇一個顏色主題。變更立即生效。"
+            }
+        },
+        "theme_manager": {
+            "page_title": "主題管理員",
+            "buttons": " 套用  匯出目前主題  刪除 / 資訊  返回",
+            "export_item": "匯出目前主題...",
+            "import_item": "匯入主題...",
+            "export_dialog": {
+                "title": "主題已匯出",
+                "name_prompt": "主題名稱"
+            },
+            "export_failed": {
+                "title": "匯出失敗",
+                "desc": "無法寫入主題檔案。\n請檢查SD卡可用空間。"
+            },
+            "theme_applied": {
+                "title": "主題已套用",
+                "desc_suffix": "已立即套用。"
+            },
+            "delete_dialog": {
+                "title": "刪除主題",
+                "desc_suffix": "？\n此操作無法復原。"
+            },
+            "quick_export": {
+                "title": "主題已匯出",
+                "failed_title": "匯出失敗",
+                "failed_desc": "無法寫入主題檔案。"
+            },
+            "import_browse": {
+                "title": "匯入主題",
+                "buttons": " 選擇  取消",
+                "empty": "此處找不到 .leaflet.theme 檔案。"
+            },
+            "import_done": {
+                "title": "主題已匯入",
+                "desc_suffix": "已匯入。\n請在上方清單中選擇並套用。"
+            },
+            "import_invalid": {
+                "title": "匯入失敗",
+                "desc": "這似乎不是有效的 .leaflet.theme 檔案。"
+            },
+            "import_failed": {
+                "title": "匯入失敗",
+                "desc": "無法複製主題檔案。\n請檢查 SD 卡是否有可用空間。"
+            },
+            "info_dialog": {
+                "title": "關於主題",
+                "desc_prefix": "匯出的主題會儲存在:\n",
+                "desc_suffix": "\n\n將 .leaflet.theme 檔案放在此處即可在清單中顯示，\n或在上方選擇「匯入主題...」自動複製。"
+            }
+        },
+        "dim_delay": {
+            "title": "螢幕變暗延遲",
+            "desc": "安裝期間畫面變暗前的等待時間。",
+            "options": [
+                "15秒",
+                "30秒",
+                "1分鐘",
+                "2分鐘",
+                "5分鐘",
+                "10分鐘",
+                "永不(停用)"
+            ]
+        },
+        "fix_update_flags_dialog": {
+            "desc": "這會重設本主機上每個數位安裝遊戲的「有可用更新」標記，\n使其符合實際安裝的內容。\n\n不會安裝、刪除或變更任何遊戲內容。",
+            "confirm_all": "立即修復",
+            "confirm_one": "選擇遊戲..."
+        },
+        "fix_update_flags_done": {
+            "title": "完成",
+            "desc_suffix": "個遊戲已檢查。"
+        },
+        "fix_update_flags_picker": {
+            "empty": "找不到任何數位安裝的遊戲。"
+        },
+        "fix_update_flags_done_one": {
+            "desc_suffix": "已檢查。"
+        },
+        "title_manage": {
+            "sd_card": "SD 卡",
+            "internal": "主機儲存空間",
+            "delete_all": "完全刪除此遊戲...",
+            "delete_piece_dialog": {
+                "title": "刪除內容",
+                "desc_suffix": "嗎？\n這會立即釋放空間，且無法復原。",
+                "confirm": "刪除"
+            },
+            "piece_deleted": {
+                "title": "已刪除",
+                "desc": "該內容已被刪除。"
+            },
+            "delete_all_dialog": {
+                "title": "刪除整個遊戲",
+                "desc_suffix": "以及為其安裝的所有內容（本篇、更新與 DLC）\n將從本主機永久刪除。\n\n此操作不會刪除存檔資料。\n\n此操作無法復原。",
+                "confirm": "全部刪除"
+            },
+            "title_deleted": {
+                "title": "已刪除",
+                "desc": "該遊戲及其所有內容均已刪除。"
+            },
+            "delete_failed": {
+                "title": "刪除失敗",
+                "desc": "發生問題，遊戲未能完全刪除。\n請查看偵錯記錄以瞭解詳情。"
+            },
+            "override_warning": {
+                "title_prefix": "此遊戲目前正在使用中 (",
+                "desc": "此遊戲目前正被用於以 title takeover 模式執行自製程式選單。刪除此\n應用程式將導致返回 HOME 選單時 Atmosphère 當機。\n\n如果您瞭解此風險，仍然可以刪除該應用程式。",
+                "confirm": "仍要刪除"
+            }
+        },
+        "emummc_check": {
+            "blocked": {
+                "title": "未偵測到 emuMMC",
+                "desc": "您目前並未在 emuMMC 上執行 Leaflet。\n\n將遊戲傾印安裝到您的 sysMMC，一旦連線*將會*導致主機遭到\n*封鎖*。\n\n如果您瞭解相關風險，但仍希望關閉此檢查，可以在\n「設置 -> 一般 -> 不在 emuMMC 時警告」中關閉。\n\n請注意，這*並非*建議的做法，如果發生任何問題，將不提供任何支援。"
+            },
+            "disable_warn": {
+                "title": "關閉 emuMMC 檢查",
+                "desc": "此檢查用於防止您意外將遊戲傾印安裝到 sysMMC 而非 emuMMC。\n\n關閉此檢查後，Leaflet 將不再提醒您並未從 emuMMC 啟動。\n\n按下「繼續」開始 10 秒等待，之後才能確認此操作。",
+                "begin": "繼續",
+                "countdown_suffix": "秒後可確認...",
+                "final_desc": "等待已結束。要關閉此檢查嗎？",
+                "confirm": "關閉"
+            }
+        },
+        "sigpatch_check": {
+            "blocked": {
+                "title": "未偵測到簽章修補程式",
+                "desc": "fs-patch 似乎未啟用，或其修補程式未生效。\n\n安裝遊戲前必須對 fs 與 ldr 進行修補。\n\n請確認已安裝 fs-patch 且至少執行過一次，然後重新開機後再試一次。\n\n請注意，此檢查主要用於防止您意外將遊戲傾印安裝到 sysMMC 上。\n\n如果您瞭解相關風險但仍希望關閉此檢查，或者您使用其他方式為 FS\n與 LDR 進行修補，可以在「設置 -> 一般 -> 關閉 fs-patch 檢查」中\n關閉它。"
+            },
+            "disable_warn": {
+                "title": "關閉 fs-patch 檢查",
+                "desc": "關閉後，Leaflet 將不再提醒您未偵測到 fs-patch。如果您使用其他\n方式為 FS 與 LDR 進行修補，可以關閉此檢查。\n\n按下「繼續」開始 10 秒等待，之後才能確認此操作。",
+                "begin": "繼續",
+                "countdown_suffix": "秒後可確認...",
+                "final_desc": "等待已結束。要關閉此檢查嗎？",
+                "confirm": "關閉"
+            }
+        }
+    },
+    "common": {
+        "ok": "確定",
+        "cancel": "取消",
+        "close": "關閉",
+        "yes": "是",
+        "no": "否",
+        "cancel_desc": "按  取消"
+    }
+}
