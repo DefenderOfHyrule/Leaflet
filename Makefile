@@ -56,7 +56,7 @@ INCLUDES	:=	include/libusbhsfs/include include include/ui include/data include/i
 				$(PLUTONIUM_INCLUDE_SWITCH) $(PLUTONIUM_INCLUDE_OUTPUT) $(PLUTONIUM_INCLUDE_SOURCE) external/libhaze/include
 APP_TITLE	:=	Leaflet
 APP_AUTHOR	:=	DefenderOfHyrule
-APP_VERSION	:=	1.0.0
+APP_VERSION	:=	1.0.1
 GIT_COMMIT	:=	$(shell if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then git rev-parse --short=8 HEAD 2>/dev/null; else echo nogit; fi)
 GIT_STATUS	:=	$(shell if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then if git diff --quiet --ignore-submodules HEAD -- 2>/dev/null && git diff --cached --quiet --ignore-submodules HEAD -- 2>/dev/null; then echo clean; else echo dirty; fi; else echo nogit; fi)
 ifeq ($(RELEASE),1)
@@ -73,7 +73,7 @@ ROMFS		:=	romfs
 # options for code generation
 #---------------------------------------------------------------------------------
 DEFINES	+=	-DAPP_VERSION=\"$(APP_VERSION)\"
-DEFINES += 	-DGLEAF_VERSION=\"1.0.0\" 
+DEFINES += 	-DGLEAF_VERSION=\"1.0.1\" 
 DEFINES	+=	-DAPP_GIT_META=\"$(APP_GIT_META)\"
 DEFINES	+=	-DAPP_VERSION_FULL=\"$(APP_VERSION_FULL)\"
 ifeq ($(DEBUG),1)
