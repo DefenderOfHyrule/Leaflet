@@ -611,9 +611,9 @@ namespace inst::util {
         return ldrSectionExists ? (fsPatched && ldrPatched) : fsPatched;
     }
 
-    bool isEmuMmc() {
+    static EmuMmcCheckResult getEmuMmcCheckResultFromFsPatchLog() {
         std::ifstream f("sdmc:/config/fs-patch/log.ini");
-        if (!f) return false;
+        if (!f) return EmuMmcCheckResult::Undetermined;
 
         std::string currentSection;
         std::string line;
@@ -640,10 +640,27 @@ namespace inst::util {
                 value.erase(0, 1);
 
             if (key == "is_emummc")
-                return !value.empty() && value.front() == '1';
+                return (!value.empty() && value.front() == '1')
+                    ? EmuMmcCheckResult::OnEmuMmc
+                    : EmuMmcCheckResult::OnSysMmc;
         }
 
-        return false;
+        return EmuMmcCheckResult::Undetermined;
+    }
+
+    EmuMmcCheckResult getEmuMmcCheckResult() {
+        constexpr SplConfigItem SplConfigItem_ExosphereEmummcType = (SplConfigItem)65007;
+
+        Result rc = splInitialize();
+        if (R_SUCCEEDED(rc)) {
+            u64 isEmummc = 0;
+            rc = splGetConfig(SplConfigItem_ExosphereEmummcType, &isEmummc);
+            splExit();
+            if (R_SUCCEEDED(rc))
+                return (isEmummc != 0) ? EmuMmcCheckResult::OnEmuMmc : EmuMmcCheckResult::OnSysMmc;
+        }
+
+        return getEmuMmcCheckResultFromFsPatchLog();
     }
     const std::vector<std::string>& getCachedUpdateInfo() {
         return g_cachedUpdateInfo;

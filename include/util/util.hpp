@@ -33,5 +33,7 @@ namespace inst::util {
     const std::vector<std::string>& getCachedUpdateInfo();
     bool isFsPatchLogStale();
     bool checkSigPatches();
-    bool isEmuMmc();
+
+    enum class EmuMmcCheckResult { OnEmuMmc, OnSysMmc, Undetermined };
+    EmuMmcCheckResult getEmuMmcCheckResult();
 }

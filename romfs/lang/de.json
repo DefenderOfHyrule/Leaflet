@@ -506,6 +506,10 @@
                 "title": "Kein emuMMC erkannt",
                 "desc": "Du verwendest Leaflet derzeit nicht auf deiner emuMMC.\n\nDas Installieren deiner Spiel-Dumps auf deinem sysMMC *wird* zu einer\n*SPERRUNG* deiner Konsole führen, sobald du online gehst.\n\nWenn dir die damit verbundenen Risiken bewusst sind, du diese Prüfung\naber trotzdem deaktivieren möchtest, kannst du das unter\nEinstellungen -> Allgemein -> \"Warnen, wenn nicht auf emuMMC\" tun.\n\nBeachte, dass dies *NICHT* empfohlen wird und bei Problemen kein\nSupport geleistet wird."
             },
+            "undetermined": {
+                "title": "Kann emuMMC nicht bestätigen",
+                "desc": "Leaflet konnte nicht bestätigen, dass du auf einer emuMMC läufst.\n\nDie Installation deiner Spieldumps auf deine sysMMC führt *garantiert*\nzu einer *SPERRUNG* deiner Konsole, sobald du online gehst, und Leaflet\nkann nicht bestätigen, dass das gerade nicht passiert.\n\nWenn dir die damit verbundenen Risiken bewusst sind, du diese Prüfung aber trotzdem\ndeaktivieren möchtest, kannst du das unter Einstellungen -> Allgemein -> \"Warnen, wenn nicht auf emuMMC\" tun."
+            },
             "disable_warn": {
                 "title": "emuMMC-Prüfung deaktivieren",
                 "desc": "Diese Prüfung existiert, damit du nicht versehentlich deine Spiel-Dumps\nauf deinem sysMMC statt auf einer emuMMC installierst.\n\nWenn du sie deaktivierst, warnt Leaflet dich nicht mehr davor, dass du\nnicht von deiner emuMMC gestartet bist.\n\nDrücke \"Fortfahren\", um eine 10-sekündige Wartezeit zu starten, bevor\ndu dies bestätigen kannst.",

@@ -506,6 +506,10 @@
                 "title": "Not running emuMMC",
                 "desc": "You are currently not running Leaflet on your emuMMC.\n\nInstalling your game dumps to your sysMMC *will* get your console\n*BANNED* if you go online.\n\nIf you are aware of the involved risks but wish to disable this check\nanyway, you can do so in Settings -> General -> \"Warn if not on emuMMC\".\n\nPlease note that this is *NOT* something you should do, and no support\nwill be given if anything goes wrong."
             },
+            "undetermined": {
+                "title": "Can't confirm you're on emuMMC",
+                "desc": "Leaflet could not confirm that you are running on emuMMC.\n\nInstalling your game dumps to your sysMMC *will* get your console\n*BANNED* if you go online, and Leaflet has no way to confirm that isn't\nabout to happen.\n\nIf you are aware of the involved risks but wish to disable this check\nanyway, you can do so in Settings -> General -> \"Warn if not on emuMMC\"."
+            },
             "disable_warn": {
                 "title": "Disable emuMMC check",
                 "desc": "This check exists to stop you from accidentally installing your game\ndumps to your sysMMC instead of an emuMMC.\n\nTurning this check off means that Leaflet will no longer warn you\nabout not being booted into your emuMMC.\n\nPress \"Continue\" to begin a 10 second wait before you can confirm this.",

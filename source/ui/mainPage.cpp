@@ -390,7 +390,19 @@ namespace inst::ui {
 
     static bool warnIfSysmmc() {
         if (inst::config::emummcSafetyDisabled) return true;
-        if (inst::util::isEmuMmc()) return true;
+
+        const auto status = inst::util::getEmuMmcCheckResult();
+        if (status == inst::util::EmuMmcCheckResult::OnEmuMmc) return true;
+
+        if (status == inst::util::EmuMmcCheckResult::Undetermined) {
+            mainApp->CreateShowDialog(
+                "options.emummc_check.undetermined.title"_lang,
+                "options.emummc_check.undetermined.desc"_lang,
+                {"common.ok"_lang},
+                true
+            );
+            return false;
+        }
 
         mainApp->CreateShowDialog(
             "options.emummc_check.blocked.title"_lang,

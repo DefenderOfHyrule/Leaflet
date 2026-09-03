@@ -506,6 +506,10 @@
                 "title": "No se detectó emuMMC",
                 "desc": "Actualmente no estás usando Leaflet en tu emuMMC.\n\nInstalar tus dumps de juegos en tu sysMMC *provocará* que tu consola\nsea *BANEADA* si te conectas en línea.\n\nSi eres consciente de los riesgos involucrados pero deseas desactivar\nesta verificación de todos modos, puedes hacerlo en\nAjustes -> General -> \"Avisar si no está en emuMMC\".\n\nTen en cuenta que esto *NO* es algo que debas hacer, y no se brindará\nsoporte si algo sale mal."
             },
+            "undetermined": {
+                "title": "No se puede confirmar emuMMC",
+                "desc": "Leaflet no pudo confirmar que estés usando emuMMC.\n\nInstalar tus dumps de juegos en tu sysMMC *hará* que tu consola sea\n*BANEADA* si te conectas en línea, y Leaflet no tiene forma de confirmar\nque eso no esté a punto de suceder.\n\nSi conoces los riesgos involucrados pero deseas desactivar esta verificación\nde todas formas, puedes hacerlo en Configuración -> General -> \"Avisar si no estoy en emuMMC\"."
+            },
             "disable_warn": {
                 "title": "Desactivar verificación de emuMMC",
                 "desc": "Esta verificación existe para evitar que instales accidentalmente tus\ndumps de juegos en tu sysMMC en lugar de una emuMMC.\n\nDesactivarla significa que Leaflet ya no te avisará si no estás\niniciando desde tu emuMMC.\n\nPresiona \"Continuar\" para iniciar una espera de 10 segundos antes de\npoder confirmarlo.",

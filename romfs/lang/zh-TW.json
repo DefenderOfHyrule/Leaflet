@@ -506,6 +506,10 @@
                 "title": "未偵測到 emuMMC",
                 "desc": "您目前並未在 emuMMC 上執行 Leaflet。\n\n將遊戲傾印安裝到您的 sysMMC，一旦連線*將會*導致主機遭到\n*封鎖*。\n\n如果您瞭解相關風險，但仍希望關閉此檢查，可以在\n「設置 -> 一般 -> 不在 emuMMC 時警告」中關閉。\n\n請注意，這*並非*建議的做法，如果發生任何問題，將不提供任何支援。"
             },
+            "undetermined": {
+                "title": "無法確認 emuMMC",
+                "desc": "Leaflet 無法確認您正在 emuMMC 上執行。\n\n將遊戲傾印安裝到 sysMMC *將會*導致您的主機在連線時被*封鎖*，\n而 Leaflet 無法確認這種情況不會發生。\n\n若您了解相關風險，但仍希望停用此檢查，\n可以在「設定 -> 一般 -> 不在 emuMMC 時警告」中關閉。"
+            },
             "disable_warn": {
                 "title": "關閉 emuMMC 檢查",
                 "desc": "此檢查用於防止您意外將遊戲傾印安裝到 sysMMC 而非 emuMMC。\n\n關閉此檢查後，Leaflet 將不再提醒您並未從 emuMMC 啟動。\n\n按下「繼續」開始 10 秒等待，之後才能確認此操作。",

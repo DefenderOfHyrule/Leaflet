@@ -506,6 +506,10 @@
                 "title": "emuMMC non rilevata",
                 "desc": "Al momento non stai usando Leaflet sulla tua emuMMC.\n\nInstallare i tuoi dump di gioco sulla tua sysMMC *comporterà* il\n*BAN* della tua console se ti connetti online.\n\nSe sei consapevole dei rischi ma vuoi comunque disattivare questo\ncontrollo, puoi farlo in Impostazioni -> Generali -> \"Avvisa se non su\nemuMMC\".\n\nTieni presente che *NON* è consigliato farlo, e non verrà fornito\nalcun supporto in caso di problemi."
             },
+            "undetermined": {
+                "title": "Impossibile confermare emuMMC",
+                "desc": "Leaflet non è riuscito a confermare che stai usando emuMMC.\n\nInstallare i dump dei tuoi giochi sulla sysMMC *farà* *BANNARE* la tua\nconsole se ti connetti online, e Leaflet non ha modo di confermare che\nquesto non stia per accadere.\n\nSe sei consapevole dei rischi ma vuoi comunque disattivare questo controllo,\npuoi farlo in Impostazioni -> Generale -> \"Avvisa se non su emuMMC\"."
+            },
             "disable_warn": {
                 "title": "Disattiva controllo emuMMC",
                 "desc": "Questo controllo esiste per evitare che tu installi accidentalmente i\ntuoi dump di gioco sulla tua sysMMC invece che su una emuMMC.\n\nDisattivarlo significa che Leaflet non ti avviserà più se non stai\navviando dalla tua emuMMC.\n\nPremi \"Continua\" per avviare un'attesa di 10 secondi prima di poter\nconfermare.",

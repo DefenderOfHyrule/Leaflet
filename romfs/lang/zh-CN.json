@@ -506,6 +506,10 @@
                 "title": "未检测到 emuMMC",
                 "desc": "您目前并未在 emuMMC 上运行 Leaflet。\n\n将游戏转储安装到您的 sysMMC，一旦联网*将会*导致主机被\n*封禁*。\n\n如果您了解相关风险，但仍希望关闭此检查，可以在\n“设置 -> 通用 -> 不在 emuMMC 时警告”中关闭。\n\n请注意，这*并非*建议的做法，如果出现任何问题，将不提供任何支持。"
             },
+            "undetermined": {
+                "title": "无法确认 emuMMC",
+                "desc": "Leaflet 无法确认您正在 emuMMC 上运行。\n\n将游戏转储安装到 sysMMC *将会*导致您的主机在联网时被*封禁*，\n而 Leaflet 无法确认这种情况不会发生。\n\n如果您了解相关风险，但仍希望禁用此检查，\n可以在“设置 -> 常规 -> 不在 emuMMC 时警告”中关闭。"
+            },
             "disable_warn": {
                 "title": "关闭 emuMMC 检查",
                 "desc": "此检查用于防止您意外将游戏转储安装到 sysMMC 而不是 emuMMC。\n\n关闭此检查后，Leaflet 将不再提醒您并未从 emuMMC 启动。\n\n按“继续”开始 10 秒等待，之后才能确认此操作。",
