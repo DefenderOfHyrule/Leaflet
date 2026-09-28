@@ -41,6 +41,7 @@ namespace inst::ui {
 
 namespace {
     u8 GetSystemKeyGeneration() {
+        if (hosversionAtLeast(23, 0, 0)) return 22;
         if (hosversionAtLeast(22, 0, 0)) return 21;
         if (hosversionAtLeast(21, 0, 0)) return 20;
         if (hosversionAtLeast(20, 0, 0)) return 19;
