@@ -31,7 +31,6 @@ namespace inst::util {
     void playNavigationClickIfNeeded(std::uint64_t buttonsDown);
     std::vector<std::string> checkForAppUpdate();
     const std::vector<std::string>& getCachedUpdateInfo();
-    bool isFsPatchLogStale();
     bool checkSigPatches();
 
     enum class EmuMmcCheckResult { OnEmuMmc, OnSysMmc, Undetermined };

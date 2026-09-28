@@ -294,7 +294,7 @@
             "fix_update_flags": "Fix update-available flags",
             "manage_titles": "Manage installed titles",
             "emummc_check": "Warn if not on emuMMC",
-            "sigpatch_check": "Disable fs-patch check"
+            "sigpatch_check": "Disable signature patch check"
         },
         "update": {
             "title": "Update available",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "Signature patches not detected",
-                "desc": "fs-patch does not appear to be active or its patches were not applied.\n\nfs and ldr must be patched before installing titles.\n\nEnsure fs-patch is installed and has run at least once, then restart\nand try again.\n\nBe aware that this check primarily exists so you don't accidentally\ninstall your game dumps on your sysMMC.\n\nIf you wish to disable this check despite knowing the involved risks\nor if you have a different method of patching FS and LDR, you can\ndisable this check by going to Settings -> General -> \"Disable\nfs-patch check\"."
+                "desc": "FS and LDR do not appear to be patched.\n\nBoth must be patched before installing titles.\n\nIf you don't have signature patches set up yet, fs-patch is the\nsimplest way to get them: install it, reboot, and try again.\n\nBe aware that this check primarily exists so you don't accidentally\ninstall your game dumps on your sysMMC.\n\nIf you wish to disable this check despite knowing the involved risks,\nyou can disable it by going to Settings -> General -> \"Disable\nsignature patch check\"."
             },
             "disable_warn": {
-                "title": "Disable fs-patch check",
-                "desc": "Turning this check off means that Leaflet will no longer warn you\nabout fs-patch not being detected. If you have a different method of\npatching FS and LDR, you may disable this check.\n\nPress \"Continue\" to begin a 10 second wait before you can confirm this.",
+                "title": "Disable signature patch check",
+                "desc": "Turning this check off means that Leaflet will no longer warn you\nwhen FS and LDR are not patched.\n\nThe main reason to turn this off is a firmware too new for Leaflet to\nread correctly.\n\nPress \"Continue\" to begin a 10 second wait before you can confirm this.",
                 "begin": "Continue",
                 "countdown_suffix": "s remaining...",
                 "final_desc": "You've waited out the countdown. Turn this check off?",

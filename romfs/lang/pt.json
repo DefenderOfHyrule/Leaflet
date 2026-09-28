@@ -294,7 +294,7 @@
             "fix_update_flags": "Corrigir indicadores de atualização",
             "manage_titles": "Gerenciar jogos instalados",
             "emummc_check": "Avisar se não estiver no emuMMC",
-            "sigpatch_check": "Desativar verificação de fs-patch"
+            "sigpatch_check": "Desativar verificação de patches de assinatura"
         },
         "update": {
             "title": "Atualização disponível",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "Patches de assinatura não detectados",
-                "desc": "O fs-patch não parece estar ativo ou seus patches não foram\naplicados.\n\nfs e ldr precisam estar corrigidos antes de instalar jogos.\n\nCertifique-se de que o fs-patch está instalado e já foi executado\npelo menos uma vez, depois reinicie e tente novamente.\n\nSaiba que essa verificação existe principalmente para você não\ninstalar acidentalmente seus dumps de jogos no seu sysMMC.\n\nSe você quiser desativá-la mesmo ciente dos riscos envolvidos, ou se\nusa um método diferente para aplicar patches em FS e LDR, pode\ndesativá-la em Definições -> Geral -> \"Desativar verificação de\nfs-patch\"."
+                "desc": "FS e LDR não parecem estar corrigidos.\n\nAmbos precisam estar corrigidos antes de instalar jogos.\n\nSe você ainda não tem patches de assinatura configurados, o fs-patch\né a forma mais simples de obtê-los: instale-o, reinicie e tente\nnovamente.\n\nSaiba que essa verificação existe principalmente para você não\ninstalar acidentalmente seus dumps de jogos no seu sysMMC.\n\nSe você quiser desativá-la mesmo ciente dos riscos envolvidos, pode\ndesativá-la em Definições -> Geral -> \"Desativar verificação de\npatches de assinatura\"."
             },
             "disable_warn": {
-                "title": "Desativar verificação de fs-patch",
-                "desc": "Desativá-la significa que o Leaflet não vai mais avisar você sobre o\nfs-patch não ser detectado. Se você usa um método diferente para\naplicar patches em FS e LDR, pode desativar essa verificação.\n\nPressione \"Continuar\" para iniciar uma espera de 10 segundos antes de\npoder confirmar.",
+                "title": "Desativar verificação de patches de assinatura",
+                "desc": "Desativá-la significa que o Leaflet não vai mais avisar você quando FS\ne LDR não estiverem corrigidos.\n\nO principal motivo para desativá-la é um firmware novo demais para o\nLeaflet.\n\nPressione \"Continuar\" para iniciar uma espera de 10 segundos antes de\npoder confirmar.",
                 "begin": "Continuar",
                 "countdown_suffix": "s restantes...",
                 "final_desc": "A espera terminou. Desativar essa verificação?",

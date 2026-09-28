@@ -294,7 +294,7 @@
             "fix_update_flags": "修復更新提示標記",
             "manage_titles": "管理已安裝的遊戲",
             "emummc_check": "不在 emuMMC 時警告",
-            "sigpatch_check": "關閉 fs-patch 檢查"
+            "sigpatch_check": "關閉簽章修補檢查"
         },
         "update": {
             "title": "有可用的更新版本",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "未偵測到簽章修補程式",
-                "desc": "fs-patch 似乎未啟用，或其修補程式未生效。\n\n安裝遊戲前必須對 fs 與 ldr 進行修補。\n\n請確認已安裝 fs-patch 且至少執行過一次，然後重新開機後再試一次。\n\n請注意，此檢查主要用於防止您意外將遊戲傾印安裝到 sysMMC 上。\n\n如果您瞭解相關風險但仍希望關閉此檢查，或者您使用其他方式為 FS\n與 LDR 進行修補，可以在「設定 -> 一般 -> 關閉 fs-patch 檢查」中\n關閉它。"
+                "desc": "fs 與 ldr 似乎未進行修補。\n\n安裝遊戲前必須對兩者都進行修補。\n\n如果您尚未設定簽章修補，使用 fs-patch 是最簡單的方式：\n安裝後重新開機，然後再試一次。\n\n請注意，此檢查主要用於防止您意外將遊戲傾印安裝到 sysMMC 上。\n\n如果您瞭解相關風險但仍希望關閉此檢查，可以在「設定 -> 一般 ->\n關閉簽章修補檢查」中關閉它。"
             },
             "disable_warn": {
-                "title": "關閉 fs-patch 檢查",
-                "desc": "關閉後，Leaflet 將不再提醒您未偵測到 fs-patch。如果您使用其他\n方式為 FS 與 LDR 進行修補，可以關閉此檢查。\n\n按下「繼續」開始 10 秒等待，之後才能確認此操作。",
+                "title": "關閉簽章修補檢查",
+                "desc": "關閉後，Leaflet 將不再提醒您 FS 與 LDR 未進行修補。\n\n關閉此檢查的主要理由是韌體版本對 Leaflet 而言過新。\n\n按下「繼續」開始 10 秒等待，之後才能確認此操作。",
                 "begin": "繼續",
                 "countdown_suffix": "秒後可確認...",
                 "final_desc": "等待已結束。要關閉此檢查嗎？",
