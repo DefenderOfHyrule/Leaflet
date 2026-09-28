@@ -158,9 +158,9 @@ namespace inst::diag {
         }
 
         if (ContainsAny(lower, {"failed to import ticket", "personalized", "device-specific", "titlekey crypto", "improperly dumped"})) {
-            failure.category = "fs-patch patching failure (fs)";
-            failure.summary = "[ERROR] You normally shouldn't be able to see this error message. Leaflet has detected the stale log.ini in sd:/config/fs-patch.";
-            failure.recommendation = "If you do, please (re)install fs-patch.";
+            failure.category = "Signature patch failure (fs)";
+            failure.summary = "[ERROR] You normally shouldn't be able to see this error message. FS and LDR looked patched when this install started.";
+            failure.recommendation = "Reboot and try again. If it keeps happening, (re)install fs-patch.";
             return failure;
         }
 
@@ -180,8 +180,8 @@ namespace inst::diag {
 
         if (ContainsAny(lower, {"failed to register", "failed to set content records", "commit content records", "failed to read file", "failed to write", "storage", "sd", "i/o", "no space", "filesystem"})) {
             failure.category = "Storage write failure";
-            failure.summary = "[ERROR] Failed to write content to target storage. Leaflet may have detected the stale log.ini in sd:/config/fs-patch.";
-            failure.recommendation = "(Re)install fs-patch, check filesystem health, and check write permissions.";
+            failure.summary = "[ERROR] Failed to write content to target storage.";
+            failure.recommendation = "Check filesystem health and write permissions. If FS and LDR aren't patched, (re)install fs-patch.";
             return failure;
         }
 

@@ -294,7 +294,7 @@
             "fix_update_flags": "Update-Kennzeichen korrigieren",
             "manage_titles": "Installierte Spiele verwalten",
             "emummc_check": "Warnen, wenn nicht auf emuMMC",
-            "sigpatch_check": "fs-patch-Prüfung deaktivieren"
+            "sigpatch_check": "Signaturpatch-Prüfung deaktivieren"
         },
         "update": {
             "title": "Neue Version verfügbar",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "Signatur-Patches nicht erkannt",
-                "desc": "fs-patch scheint nicht aktiv zu sein oder seine Patches wurden nicht\nangewendet.\n\nfs und ldr müssen gepatcht sein, bevor Titel installiert werden\nkönnen.\n\nStelle sicher, dass fs-patch installiert ist und mindestens einmal\nausgeführt wurde, starte dann neu und versuche es erneut.\n\nBeachte, dass diese Prüfung in erster Linie existiert, damit du nicht\nversehentlich deine Spiel-Dumps auf deinem sysMMC installierst.\n\nWenn du sie trotz der bekannten Risiken deaktivieren möchtest, oder\nwenn du eine andere Methode zum Patchen von FS und LDR verwendest,\nkannst du das unter Einstellungen -> Allgemein -> \"fs-patch-Prüfung\ndeaktivieren\" tun."
+                "desc": "FS und LDR scheinen nicht gepatcht zu sein.\n\nBeide müssen gepatcht sein, bevor Titel installiert werden können.\n\nWenn du noch keine Signaturpatches eingerichtet hast, ist fs-patch\nder einfachste Weg: installiere es, starte neu und versuche es\nerneut.\n\nBeachte, dass diese Prüfung in erster Linie existiert, damit du nicht\nversehentlich deine Spiel-Dumps auf deinem sysMMC installierst.\n\nWenn du sie trotz der bekannten Risiken deaktivieren möchtest, kannst\ndu das unter Einstellungen -> Allgemein -> \"Signaturpatch-Prüfung\ndeaktivieren\" tun."
             },
             "disable_warn": {
-                "title": "fs-patch-Prüfung deaktivieren",
-                "desc": "Wenn du sie deaktivierst, warnt Leaflet dich nicht mehr davor, dass\nfs-patch nicht erkannt wurde. Wenn du eine andere Methode zum Patchen\nvon FS und LDR verwendest, kannst du diese Prüfung deaktivieren.\n\nDrücke \"Fortfahren\", um eine 10-sekündige Wartezeit zu starten, bevor\ndu dies bestätigen kannst.",
+                "title": "Signaturpatch-Prüfung deaktivieren",
+                "desc": "Wenn du sie deaktivierst, warnt Leaflet dich nicht mehr davor, dass\nFS und LDR nicht gepatcht sind.\n\nDer Hauptgrund zum Deaktivieren ist eine Firmware, die für Leaflet zu\nneu ist.\n\nDrücke \"Fortfahren\", um eine 10-sekündige Wartezeit zu starten, bevor\ndu dies bestätigen kannst.",
                 "begin": "Fortfahren",
                 "countdown_suffix": "s verbleibend...",
                 "final_desc": "Die Wartezeit ist abgelaufen. Diese Prüfung deaktivieren?",

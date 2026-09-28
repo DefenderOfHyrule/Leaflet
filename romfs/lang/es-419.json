@@ -294,7 +294,7 @@
             "fix_update_flags": "Corregir indicadores de actualización",
             "manage_titles": "Administrar juegos instalados",
             "emummc_check": "Avisar si no está en emuMMC",
-            "sigpatch_check": "Desactivar verificación de fs-patch"
+            "sigpatch_check": "Desactivar verificación de parches de firma"
         },
         "update": {
             "title": "Actualización disponible",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "No se detectaron parches de firma",
-                "desc": "fs-patch no parece estar activo o sus parches no se aplicaron.\n\nfs y ldr deben estar parcheados antes de instalar títulos.\n\nAsegúrate de que fs-patch esté instalado y se haya ejecutado al menos\nuna vez, luego reinicia e inténtalo de nuevo.\n\nTen en cuenta que esta verificación existe principalmente para que no\ninstales accidentalmente tus dumps de juegos en tu sysMMC.\n\nSi deseas desactivarla a pesar de conocer los riesgos, o si usas un\nmétodo distinto para parchear FS y LDR, puedes hacerlo en\nAjustes -> General -> \"Desactivar verificación de fs-patch\"."
+                "desc": "FS y LDR no parecen estar parcheados.\n\nAmbos deben estar parcheados antes de instalar títulos.\n\nSi aún no tienes parches de firma configurados, fs-patch es la forma\nmás sencilla de conseguirlos: instálalo, reinicia e inténtalo de\nnuevo.\n\nTen en cuenta que esta verificación existe principalmente para que no\ninstales accidentalmente tus dumps de juegos en tu sysMMC.\n\nSi deseas desactivarla a pesar de conocer los riesgos, puedes hacerlo\nen Ajustes -> General -> \"Desactivar verificación de parches de\nfirma\"."
             },
             "disable_warn": {
-                "title": "Desactivar verificación de fs-patch",
-                "desc": "Desactivarla significa que Leaflet ya no te avisará si fs-patch no se\ndetecta. Si usas un método distinto para parchear FS y LDR, puedes\ndesactivar esta verificación.\n\nPresiona \"Continuar\" para iniciar una espera de 10 segundos antes de\npoder confirmarlo.",
+                "title": "Desactivar verificación de parches de firma",
+                "desc": "Desactivarla significa que Leaflet ya no te avisará si FS y LDR no\nestán parcheados.\n\nLa razón principal para desactivarla es un firmware demasiado nuevo\npara Leaflet.\n\nPresiona \"Continuar\" para iniciar una espera de 10 segundos antes de\npoder confirmarlo.",
                 "begin": "Continuar",
                 "countdown_suffix": "s restantes...",
                 "final_desc": "La espera terminó. ¿Desactivar esta verificación?",

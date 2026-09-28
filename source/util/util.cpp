@@ -16,6 +16,7 @@
 #include <SDL2/SDL_image.h>
 #include "switch.h"
 #include "util/util.hpp"
+#include "util/sigpatch_scan.hpp"
 #include "nx/ipc/leaf_ipc.h"
 #include "util/config.hpp"
 #include "util/curl.hpp"
@@ -564,88 +565,29 @@ namespace inst::util {
         return {};
     }
 
-    static bool fsPatchSysmodulePresent() {
-        return std::filesystem::exists("sdmc:/atmosphere/contents/6900000000000420");
-    }
-
-    bool isFsPatchLogStale() {
-        bool logExists = std::filesystem::exists("sdmc:/config/fs-patch/log.ini");
-        return logExists && !fsPatchSysmodulePresent();
-    }
-
     bool checkSigPatches() {
-        std::ifstream f("sdmc:/config/fs-patch/log.ini");
-        if (!f) return false;
-
-        bool fsPatched = false;
-        bool ldrPatched = false;
-        bool ldrSectionExists = false;
-        std::string currentSection;
-        std::string line;
-
-        while (std::getline(f, line)) {
-            while (!line.empty() && (line.back() == '\r' || line.back() == '\n'))
-                line.pop_back();
-            if (line.empty()) continue;
-
-            if (line.front() == '[') {
-                const auto end = line.find(']');
-                if (end != std::string::npos)
-                    currentSection = line.substr(1, end - 1);
-                if (currentSection == "ldr") ldrSectionExists = true;
-                continue;
-            }
-
-            const auto eq = line.find('=');
-            if (eq == std::string::npos) continue;
-            std::string value = line.substr(eq + 1);
-            while (!value.empty() && (value.front() == ' ' || value.front() == '\t'))
-                value.erase(0, 1);
-
-            if (value.substr(0, 7) == "Patched") {
-                if (currentSection == "fs")  fsPatched  = true;
-                if (currentSection == "ldr") ldrPatched = true;
-            }
-        }
-
-        return ldrSectionExists ? (fsPatched && ldrPatched) : fsPatched;
+        return scanSigPatchesInMemory() != SigPatchScanResult::Unpatched;
     }
 
-    static EmuMmcCheckResult getEmuMmcCheckResultFromFsPatchLog() {
-        std::ifstream f("sdmc:/config/fs-patch/log.ini");
-        if (!f) return EmuMmcCheckResult::Undetermined;
+    static EmuMmcCheckResult getEmuMmcCheckResultFromSecureMonitor() {
+        struct EmummcPaths {
+            char unk[0x80];
+            char nintendo[0x80];
+        };
 
-        std::string currentSection;
-        std::string line;
+        EmummcPaths paths{};
+        SecmonArgs args{};
+        args.X[0] = 0xF0000404; // ams_get_emummc_config
+        args.X[1] = 0;          // emummc storage index
+        args.X[2] = reinterpret_cast<u64>(&paths);
 
-        while (std::getline(f, line)) {
-            while (!line.empty() && (line.back() == '\r' || line.back() == '\n'))
-                line.pop_back();
-            if (line.empty()) continue;
+        svcCallSecureMonitor(&args);
 
-            if (line.front() == '[') {
-                const auto end = line.find(']');
-                if (end != std::string::npos)
-                    currentSection = line.substr(1, end - 1);
-                continue;
-            }
+        if (args.X[0] != 0) return EmuMmcCheckResult::Undetermined;
 
-            if (currentSection != "stats") continue;
-
-            const auto eq = line.find('=');
-            if (eq == std::string::npos) continue;
-            const std::string key = line.substr(0, eq);
-            std::string value = line.substr(eq + 1);
-            while (!value.empty() && (value.front() == ' ' || value.front() == '\t'))
-                value.erase(0, 1);
-
-            if (key == "is_emummc")
-                return (!value.empty() && value.front() == '1')
-                    ? EmuMmcCheckResult::OnEmuMmc
-                    : EmuMmcCheckResult::OnSysMmc;
-        }
-
-        return EmuMmcCheckResult::Undetermined;
+        return (paths.unk[0] != '\0' || paths.nintendo[0] != '\0')
+            ? EmuMmcCheckResult::OnEmuMmc
+            : EmuMmcCheckResult::OnSysMmc;
     }
 
     EmuMmcCheckResult getEmuMmcCheckResult() {
@@ -660,7 +602,7 @@ namespace inst::util {
                 return (isEmummc != 0) ? EmuMmcCheckResult::OnEmuMmc : EmuMmcCheckResult::OnSysMmc;
         }
 
-        return getEmuMmcCheckResultFromFsPatchLog();
+        return getEmuMmcCheckResultFromSecureMonitor();
     }
     const std::vector<std::string>& getCachedUpdateInfo() {
         return g_cachedUpdateInfo;

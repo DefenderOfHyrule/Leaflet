@@ -367,15 +367,6 @@ namespace inst::ui {
     static bool warnIfPatchesMissing() {
         if (inst::config::sigPatchCheckDisabled) return true;
 
-        if (inst::util::isFsPatchLogStale()) {
-            mainApp->CreateShowDialog(
-                "fs-patch removed from SD card",
-                "A stale fs-patch log was found in sd:/config/fs-patch/log.ini,\nbut the sysmodule is no longer present in sd:/atmosphere/contents.\n\nThe patches from the previous boot are no longer active in memory.\nInstalling content will fail.\n\nReinstall fs-patch and reboot, then try again.",
-                {"common.ok"_lang},
-                true
-            );
-            return false;
-        }
         if (!inst::util::checkSigPatches()) {
             mainApp->CreateShowDialog(
                 "options.sigpatch_check.blocked.title"_lang,

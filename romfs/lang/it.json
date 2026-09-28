@@ -294,7 +294,7 @@
             "fix_update_flags": "Correggi indicatori di aggiornamento",
             "manage_titles": "Gestisci giochi installati",
             "emummc_check": "Avvisa se non su emuMMC",
-            "sigpatch_check": "Disattiva controllo fs-patch"
+            "sigpatch_check": "Disattiva controllo patch di firma"
         },
         "update": {
             "title": "Aggiornamento disponibile",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "Patch di firma non rilevate",
-                "desc": "fs-patch non sembra essere attivo o le sue patch non sono state\napplicate.\n\nfs e ldr devono essere patchati prima di installare titoli.\n\nAssicurati che fs-patch sia installato e sia stato eseguito almeno\nuna volta, quindi riavvia e riprova.\n\nTieni presente che questo controllo esiste principalmente per\nevitare che tu installi accidentalmente i tuoi dump di gioco sulla\ntua sysMMC.\n\nSe desideri disattivarlo pur conoscendo i rischi, o se usi un metodo\ndiverso per applicare le patch a FS e LDR, puoi farlo in\nImpostazioni -> Generali -> \"Disattiva controllo fs-patch\"."
+                "desc": "FS e LDR non sembrano essere patchati.\n\nEntrambi devono essere patchati prima di installare titoli.\n\nSe non hai ancora delle patch di firma, fs-patch è il modo più\nsemplice per ottenerle: installalo, riavvia e riprova.\n\nTieni presente che questo controllo esiste principalmente per\nevitare che tu installi accidentalmente i tuoi dump di gioco sulla\ntua sysMMC.\n\nSe desideri disattivarlo pur conoscendo i rischi, puoi farlo in\nImpostazioni -> Generali -> \"Disattiva controllo patch di firma\"."
             },
             "disable_warn": {
-                "title": "Disattiva controllo fs-patch",
-                "desc": "Disattivarlo significa che Leaflet non ti avviserà più se fs-patch non\nviene rilevato. Se usi un metodo diverso per applicare le patch a FS e\nLDR, puoi disattivare questo controllo.\n\nPremi \"Continua\" per avviare un'attesa di 10 secondi prima di poter\nconfermare.",
+                "title": "Disattiva controllo patch di firma",
+                "desc": "Disattivarlo significa che Leaflet non ti avviserà più se FS e LDR non\nsono patchati.\n\nIl motivo principale per disattivarlo è un firmware troppo recente per\nLeaflet.\n\nPremi \"Continua\" per avviare un'attesa di 10 secondi prima di poter\nconfermare.",
                 "begin": "Continua",
                 "countdown_suffix": "s rimanenti...",
                 "final_desc": "L'attesa è terminata. Disattivare questo controllo?",

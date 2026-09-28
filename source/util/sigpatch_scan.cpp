@@ -9,8 +9,6 @@ namespace inst::util {
     namespace {
         constexpr u32 FW_VER_ANY = 0x0;
         constexpr u16 REGEX_SKIP = 0x100;
-
-        // fs .text is well under this; the cap just stops a bogus region eating the heap.
         constexpr u64 MAX_REGION_SIZE = 0x800000;
 
         constexpr u64 FS_PROGRAM_ID  = 0x0100000000000000;
@@ -32,7 +30,7 @@ namespace inst::util {
             while (*s != '\0') {
                 if (sizeof(T) == sizeof(u16) && *s == '.') {
                     data[size] = REGEX_SKIP;
-                    s += 2; // consume both dots of ".."
+                    s += 2;
                 } else {
                     data[size] |= hexstr_2_nibble(*s++) << 4;
                     data[size] |= hexstr_2_nibble(*s++) << 0;

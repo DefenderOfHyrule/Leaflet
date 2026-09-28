@@ -294,7 +294,7 @@
             "fix_update_flags": "修复更新提示标记",
             "manage_titles": "管理已安装的游戏",
             "emummc_check": "不在 emuMMC 时警告",
-            "sigpatch_check": "关闭 fs-patch 检查"
+            "sigpatch_check": "关闭签名补丁检查"
         },
         "update": {
             "title": "有更新可用",
@@ -522,11 +522,11 @@
         "sigpatch_check": {
             "blocked": {
                 "title": "未检测到签名补丁",
-                "desc": "fs-patch 似乎未激活，或其补丁未生效。\n\n安装游戏前必须对 fs 和 ldr 打补丁。\n\n请确认已安装 fs-patch 且至少运行过一次，然后重启后重试。\n\n请注意，此检查主要用于防止您意外将游戏转储安装到 sysMMC 上。\n\n如果您了解相关风险但仍希望关闭此检查，或者您使用其他方式为 FS\n和 LDR 打补丁，可以在“设置 -> 通用 -> 关闭 fs-patch 检查”中\n关闭它。"
+                "desc": "fs 和 ldr 似乎未打补丁。\n\n安装游戏前必须对两者都打补丁。\n\n如果您还没有配置签名补丁，使用 fs-patch 是最简单的方式：\n安装后重启，然后重试。\n\n请注意，此检查主要用于防止您意外将游戏转储安装到 sysMMC 上。\n\n如果您了解相关风险但仍希望关闭此检查，可以在“设置 -> 通用 ->\n关闭签名补丁检查”中关闭它。"
             },
             "disable_warn": {
-                "title": "关闭 fs-patch 检查",
-                "desc": "关闭后，Leaflet 将不再提醒您未检测到 fs-patch。如果您使用其他\n方式为 FS 和 LDR 打补丁，可以关闭此检查。\n\n按“继续”开始 10 秒等待，之后才能确认此操作。",
+                "title": "关闭签名补丁检查",
+                "desc": "关闭后，Leaflet 将不再提醒您 FS 和 LDR 未打补丁。\n\n关闭此检查的主要理由是固件版本对 Leaflet 而言过新。\n\n按“继续”开始 10 秒等待，之后才能确认此操作。",
                 "begin": "继续",
                 "countdown_suffix": "秒后可确认...",
                 "final_desc": "等待已结束。要关闭此检查吗？",
