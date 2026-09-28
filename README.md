@@ -107,7 +107,7 @@ Leaflet contains a dedicated tool that allows you to reset the AVM floor of all 
 
 Building Leaflet requires the devkitPro toolchain and the following dependencies:
 ```sh
-sudo (dkp-)pacman -S switch-curl switch-mbedtls switch-sdl2 switch-sdl2_mixer switch-sdl2_gfx switch-sdl2_image switch-freetype switch-libjpeg-turbo switch-libwebp switch-libpng switch-opusfile switch-libmodplug switch-mpg123 switch-libvorbisidec switch-ntfs-3g switch-lwext4
+sudo (dkp-)pacman -S switch-curl switch-mbedtls switch-sdl2 switch-sdl2_mixer switch-sdl2_gfx switch-sdl2_image switch-freetype switch-libjpeg-turbo switch-libwebp switch-libpng switch-opusfile switch-libmodplug switch-mpg123 switch-libvorbisidec switch-ntfs-3g switch-lwext4 switch-libzstd switch-harfbuzz
 ```
 
 Once you've installed these dependencies, clone this repository recursively using the following command:
